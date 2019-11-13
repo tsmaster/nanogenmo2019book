@@ -1,0 +1,24 @@
+Campbell's Hero's Journey has 17 stages:
+(see https://en.wikipedia.org/wiki/Hero%27s_journey)
+
+1	Departure
+1.1	The Call to Adventure
+1.2	Refusal of the Call
+1.3	Meeting the Mentor
+1.4	Crossing the First Threshold
+1.5	Belly of the Whale
+2	Initiation
+2.1	The Road of Trials
+2.2	The Meeting with the Goddess
+2.3	The Woman As Temptress
+2.4	Atonement with the Father/Abyss
+2.5	Apotheosis
+2.6	The Ultimate Boon
+3	Return
+3.1	Refusal of the Return
+3.2	The Magic Flight
+3.3	Rescue from Without
+3.4	The Crossing of the Return Threshold
+3.5	Master of Two Worlds
+3.6	Freedom to Live
+
