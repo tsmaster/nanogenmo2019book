@@ -1,0 +1,15 @@
+bracer
+codpiece
+coif
+gauntlet
+greave
+helm
+helmet
+shield
+visor
+buckler
+heater shield
+kite shield
+targe
+lantern shield
+

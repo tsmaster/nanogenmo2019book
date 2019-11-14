@@ -1,7 +1,18 @@
 https://www.nltk.org/ natural language toolkit
+  can do sentiment analysis
 https://github.com/aparrish/pytracery PyTracery
 https://github.com/aparrish/pycorpora Python access to Darius Kazemi's Corpora project
 https://github.com/aparrish/gutenberg-dammit Easy access to Project Gutenberg
 https://github.com/jameswenzel/Phyme rhyming dictionary for python
 https://pypi.org/project/pronouncing/ pronouncing dictionary for python
+
+SpaCy - entity recognition, part of speech tagging, classification
+TextBlob
+VADER Valence Aware Dictionary and sEntiment Reasoner
+Stanford CoreNLP
+Gensim
+TextaCy
+
+Big List of RPG Plots (S. John Ross) formatted for easier lookup:
+https://boardgamegeek.com/blogpost/20146/turning-big-list-rpg-plots-random-generator
 

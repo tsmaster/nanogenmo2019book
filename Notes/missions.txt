@@ -1,0 +1,14 @@
+The hero probably gets sent on missions, like in ProgressQuest:
+
+"Fetch me the {artifact name} from {location}"
+"Fetch me the {artifact name} from {antagonist name}"
+
+Missions can have sub-missions
+
+"Before I give you the {artifact name}, you must do the following things for me: {mission list}"
+
+A mission may have prerequisites and a list of post-condition states, which may include inventory items, or attributes
+
+A mission might consume items (burn The Golden Fleece on the Altar of Hera)
+
+During a mission, items in the inventory might be used(up) - "Dagrec drank a potion of healing, leaving him with 3 potions remaining".
