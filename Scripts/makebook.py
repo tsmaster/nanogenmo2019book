@@ -7,6 +7,7 @@ import string
 import makechapter
 import colors
 import makeperson
+import wordwrap
 from util import *
 from tags import *
 
@@ -100,7 +101,7 @@ def formBook(chapterList):
     text = '\n'.join([str(c) for c in chapterList])
     blob = textblob.TextBlob(text)
     #return str(cycletext(blob))
-    return str(blob)
+    return wordwrap.wordwrap(str(blob), 65)
 
 def cycletext(blob):
     langs = ['es', 'fr', 'de', 'it', 'sw', 'sv', 'no', 'is', 'en']

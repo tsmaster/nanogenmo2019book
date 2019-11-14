@@ -29,7 +29,7 @@ def wrapParagraph(p, wrap_col):
 def test():
     with open("book.txt", "rt") as f:
         text = f.read()
-        print wrapParagraph(text, 65)
+        print (wordwrap(text, 65))
 
 if __name__ == "__main__":
     test()
