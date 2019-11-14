@@ -1,0 +1,9 @@
+human
+elf
+dwarf
+half-elf
+half-elk
+half-orc
+half-dragon
+halfling
+drow
