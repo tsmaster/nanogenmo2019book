@@ -3,6 +3,7 @@ import textblob
 import sys
 import random
 import string
+import time
 
 import makechapter
 import colors
@@ -10,6 +11,7 @@ import makeperson
 import wordwrap
 from util import *
 from tags import *
+import makemobychapter
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
@@ -127,14 +129,40 @@ def makeStoryDict():
 
 storyDict = makeStoryDict()
 
+startTime = time.time()
+
+def reportProgress(chapters):
+    cw = calculateWordCount(chapters)
+    print("current words: {0} target words: {1}".format(cw, TARGET_WORD_COUNT))
+    timeNow = time.time()
+    elapsedSeconds = timeNow - startTime
+    print("elapsed seconds: {0}".format(elapsedSeconds))
+    print("words per second: {0:.2f}".format(cw / elapsedSeconds))
+
 chapters = [
-    makeCallToActionChapter(storyDict),
-    makeHappilyEverAfterChapter()]
+    makeCallToActionChapter(storyDict)]
 
 while calculateWordCount(chapters) < TARGET_WORD_COUNT:
-    chapters.insert(1, makeMissionChapter())
+    print ("making mission chapter {0}".format(len(chapters)))
+    chapters.append(makeMissionChapter())
+    reportProgress(chapters)
+    # TODO pull item from inventory
+    craftItem = makeMissionObject()
+    print ("making crafting chapter {0} about {1}".format(len(chapters), craftItem))
+    chapters.append(makemobychapter.makeMobyChapter(craftItem, 800, False))
+    reportProgress(chapters)
 
-chapters[44] = makePigChapter()
+if len(chapters) > 50:
+    pigIndex = 44
+else:
+    pigIndex = int(len(chapters) / 2)
+    
+chapters.insert(pigIndex, makePigChapter())
+
+chapters.append(makeHappilyEverAfterChapter())
+
+reportProgress(chapters)
+
 renumber(chapters)
 
 s = formBook(chapters)

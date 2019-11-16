@@ -15,15 +15,16 @@ def wrapParagraph(p, wrap_col):
         return p
     
     first_line = p[:wrap_col]
-    breakIndex = first_line.rindex(' ')
-
-    if breakIndex == -1:
-        rest = p[wrap_col:]
-        return first_line + '\n' + wrapParagraph(rest, wrap_col)
-    else:
+    try:
+        breakIndex = first_line.rindex(' ')
+        
         first = first_line[:breakIndex]
         rest = p[breakIndex + 1:]
-        return first + '\n' + wrapParagraph(rest, wrap_col)
+        return first + '\n' + wrapParagraph(rest, wrap_col)        
+    except ValueError:
+        rest = p[wrap_col:]
+        return first_line + '\n' + wrapParagraph(rest, wrap_col)
+
 
 
 def test():
