@@ -12,11 +12,13 @@ import wordwrap
 from util import *
 from tags import *
 import makemobychapter
+import storydict
+import makefeastchapter
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 5000
+TARGET_WORD_COUNT = 50000
 
 missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
 missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
@@ -73,11 +75,11 @@ def makeCallToActionChapter(storyDict):
         heroRace,
         makeHonorific(mentor[GENDER_TAG])
     )
-    return makechapter.Chapter(1, text)
+    return makechapter.Chapter(1, hero[FULLNAME_TAG], text)
 
 def makeHappilyEverAfterChapter():
     text = "And they all lived happily ever after. That is the end of the story, until we tell another tale."
-    return makechapter.Chapter(7, text)
+    return makechapter.Chapter(7, "Resolutions", text)
 
 def makeMissionChapter():
     missionObject = makeMissionObject()
@@ -86,11 +88,11 @@ def makeMissionChapter():
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
     text = "And then he went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, he found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2)
-    return makechapter.Chapter(1, text)
+    return makechapter.Chapter(1, "A Mission to fetch a {0} and kill a {1}".format(missionObject, monster), text)
 
 def makePigChapter():
     text = 'And then the Orange Baby Pig said "Yeah, but I\'m going to need you to do me a favor first. I want 100 of the best hamberders. And so he went and got some hamberders. And they were fine, I guess. And the Orange Baby Pig was happy. There must have been a lot of birds around, because you could hear so much happy tweeting.'
-    return makechapter.Chapter(45, text)
+    return makechapter.Chapter(45, "An Obstruction", text)
 
 def renumber(chapterList):
     for i, c in enumerate(chapterList):
@@ -112,22 +114,7 @@ def cycletext(blob):
         blob = blob.translate(to=lang)
     return blob
 
-def makeStoryDict():
-    storyDict = {}
-
-    h = makeperson.makeperson()
-    m = makeperson.makeperson()
-    
-    storyDict[HERO_TAG] = h
-    storyDict[MENTOR_TAG] = m
-    h[MENTOR_TAG] = m
-    m[MENTEE_TAG] = h
-
-    m[HOMETOWN_TAG] = h[HOMETOWN_TAG]
-
-    return storyDict
-
-storyDict = makeStoryDict()
+storyDict = storydict.makeStoryDict()
 
 startTime = time.time()
 
@@ -145,6 +132,11 @@ chapters = [
 while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     print ("making mission chapter {0}".format(len(chapters)))
     chapters.append(makeMissionChapter())
+    reportProgress(chapters)
+    # TODO fetch monster from recent mission
+    monster = makeMonsterName()
+    print ("making feast of {0} chapter {1}".format(len(chapters), monster))
+    chapters.append(makefeastchapter.makeFeastChapter(monster, storyDict))
     reportProgress(chapters)
     # TODO pull item from inventory
     craftItem = makeMissionObject()

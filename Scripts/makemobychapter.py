@@ -157,7 +157,7 @@ def makePlaceholderMobyChapter(itemName, parLen):
     output = "This is a placeholder chapter about making {0}. I'm shooting for {1} words in this chapter. ".format(itemName, chapterLen)
     while (len(output.split()) < chapterLen):
         output += "blah blah blah "
-    return makechapter.Chapter(1, output)
+    return makechapter.Chapter(1, "A placeholder chapter about "+itemName, output)
 
 def makeMobyChapter(itemName, parLen=100, placeholder=False):
     if placeholder:
@@ -176,7 +176,7 @@ def makeMobyChapter(itemName, parLen=100, placeholder=False):
     output += parBreak
     output += makeParagraph("To properly maintain a {0}, you should".format(itemName), parLen)
     
-    return makechapter.Chapter(1, output)
+    return makechapter.Chapter(1, "The making of a " + itemName, output)
         
 
 if __name__ == "__main__":

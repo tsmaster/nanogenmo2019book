@@ -2,8 +2,9 @@ import nltk
 from textblob import TextBlob
 
 class Chapter:
-    def __init__(self, chapterNumber, text):
+    def __init__(self, chapterNumber, chapterTitle, text):
         self.chapterNumber = chapterNumber
+        self.chapterTitle = chapterTitle
         self.text = text
         if self.text[-1] != "\n":
             self.text += "\n"
@@ -11,11 +12,11 @@ class Chapter:
     def __str__(self):
         return '''
 ---
-Chapter {0}
+Chapter {0} : {2}
 ---
 
 {1}
-'''.format(self.chapterNumber, self.text)
+'''.format(self.chapterNumber, self.text, self.chapterTitle)
 
     def wordcount(self):
         s = str(self)
