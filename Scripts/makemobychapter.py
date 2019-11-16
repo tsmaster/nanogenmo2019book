@@ -153,10 +153,11 @@ def makeParagraph(prompt, length):
     return output
 
 def makePlaceholderMobyChapter(itemName, parLen):
+    import words
     chapterLen = int(parLen * 4.5)
     output = "This is a placeholder chapter about making {0}. I'm shooting for {1} words in this chapter. ".format(itemName, chapterLen)
     while (len(output.split()) < chapterLen):
-        output += "blah blah blah "
+        output += words.getRandomWord() + " "
     return makechapter.Chapter(1, "A placeholder chapter about "+itemName, output)
 
 def makeMobyChapter(itemName, parLen=100, placeholder=False):

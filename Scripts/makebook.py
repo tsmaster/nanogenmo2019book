@@ -18,7 +18,9 @@ import makefeastchapter
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 50000
+TARGET_WORD_COUNT = 8000
+
+FAKE_GPT2 = True
 
 missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
 missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
@@ -141,7 +143,7 @@ while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     # TODO pull item from inventory
     craftItem = makeMissionObject()
     print ("making crafting chapter {0} about {1}".format(len(chapters), craftItem))
-    chapters.append(makemobychapter.makeMobyChapter(craftItem, 800, False))
+    chapters.append(makemobychapter.makeMobyChapter(craftItem, 800, FAKE_GPT2))
     reportProgress(chapters)
 
 if len(chapters) > 50:
