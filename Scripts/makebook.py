@@ -14,11 +14,13 @@ from tags import *
 import makemobychapter
 import storydict
 import makefeastchapter
+import makepoem
+from makepoem import Language, Word
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 8000
+TARGET_WORD_COUNT = 10000
 
 FAKE_GPT2 = True
 
@@ -144,6 +146,9 @@ while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     craftItem = makeMissionObject()
     print ("making crafting chapter {0} about {1}".format(len(chapters), craftItem))
     chapters.append(makemobychapter.makeMobyChapter(craftItem, 800, FAKE_GPT2))
+    reportProgress(chapters)
+    print ("making poem chapter {0}".format(len(chapters)))
+    chapters.append(makepoem.makePoemChapter(storyDict))
     reportProgress(chapters)
 
 if len(chapters) > 50:

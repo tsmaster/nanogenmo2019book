@@ -5,6 +5,9 @@ https://github.com/aparrish/pycorpora Python access to Darius Kazemi's Corpora p
 https://github.com/aparrish/gutenberg-dammit Easy access to Project Gutenberg
 https://github.com/jameswenzel/Phyme rhyming dictionary for python
 https://pypi.org/project/pronouncing/ pronouncing dictionary for python
+https://pronouncing.readthedocs.io/en/latest/
+
+https://pincelate.readthedocs.io/en/latest/ machine learning model for pronouncing things
 
 SpaCy - entity recognition, part of speech tagging, classification
 TextBlob

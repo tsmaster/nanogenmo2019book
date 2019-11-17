@@ -7,8 +7,8 @@ from util import *
 def makeperson():
     pd = {}
 
-    pd[FIRSTNAME_TAG] = mutateName(random.choice(pycorpora.humans.firstNames["firstNames"])).capitalize()
-    pd[LASTNAME_TAG] = mutateName(random.choice(pycorpora.humans.lastNames["lastNames"])).capitalize()
+    pd[FIRSTNAME_TAG] = mutateWord(random.choice(pycorpora.humans.firstNames["firstNames"])).capitalize()
+    pd[LASTNAME_TAG] = mutateWord(random.choice(pycorpora.humans.lastNames["lastNames"])).capitalize()
     pd[FULLNAME_TAG] = pd[FIRSTNAME_TAG] + " " + pd[LASTNAME_TAG]
     pd[HOMETOWN_TAG] = makeCityName()
     makePronouns(pd)
@@ -17,43 +17,9 @@ def makeperson():
     return pd
 
 def makeCityName():
-    cities = ["London", "Chicago", "Skara Brae"]
+    cities = getList("cities.txt")
     baseName = random.choice(cities)
-    return mutateName(baseName).capitalize()
-
-def mutateName(n):
-    mutations = random.randrange(2, 5)
-    while mutations > 0:
-        i = random.randrange(0, len(n))
-        n = modifyString(n, i, mutateChar(n[i]))
-        mutations -= 1
-    return n
-
-def modifyString(s, i, nc):
-    c = list(s)
-    c[i]=nc
-    return ''.join(c)
-                         
-def mutateChar(c):
-    if isVowel(c):
-        return mutateVowel(c)
-    else:
-        return mutateConsonant(c)
-
-def isVowel(c):
-    return c.lower() in "aeiou"
-
-def mutateVowel(c):
-    nc = c
-    while nc == c:
-        nc = random.choice("aeiou")
-    return nc
-
-def mutateConsonant(c):
-    nc = c
-    while nc == c:
-        nc = random.choice("bcdfghjklmnpqrstvwxyz")
-    return nc
+    return mutateWord(baseName).capitalize()
 
 def makePronouns(pd):
     d100 = random.randrange(0,100)

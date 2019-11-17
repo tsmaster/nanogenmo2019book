@@ -1,3 +1,5 @@
+import random
+
 def getList(filename):
     with open(filename) as f:
         lines = f.readlines()
@@ -9,5 +11,39 @@ def dedup(wordlist):
     wordset = set(wordlist)
     return list(wordset)
 
+def mutateWord(word):
+    mutations = random.randrange(2, 5)
+    while mutations > 0:
+        i = random.randrange(0, len(word))
+        word = modifyString(word, i, mutateChar(word[i]))
+        mutations -= 1
+    return word
+
+def modifyString(s, i, nc):
+    c = list(s)
+    c[i]=nc
+    return ''.join(c)
+                         
+def mutateChar(c):
+    if isVowel(c):
+        return mutateVowel(c)
+    else:
+        return mutateConsonant(c)
+
+def isVowel(c):
+    return c.lower() in "aeiou"
+
+def mutateVowel(c):
+    nc = c
+    while nc == c:
+        nc = random.choice("aeiou")
+    return nc
+
+def mutateConsonant(c):
+    nc = c
+    while nc == c:
+        nc = random.choice("bcdfghjklmnpqrstvwxyz")
+    return nc
+    
 
 
