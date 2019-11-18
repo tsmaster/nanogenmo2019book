@@ -408,7 +408,7 @@ def makePrimeChapterText(lang):
 
 def makePoemChapter(storyDict):
     lang = readLangFromDisk("nonsense.json")
-    print("lang:", type(lang))
+    #print("lang:", type(lang))
     if type(lang) == type({'a':1}):
         newLang = Language()
         newLang.words = lang['words']

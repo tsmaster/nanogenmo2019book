@@ -4,22 +4,19 @@ import pycorpora
 from tags import *
 from util import *
 
+import makeplacename
+
 def makeperson():
     pd = {}
 
     pd[FIRSTNAME_TAG] = mutateWord(random.choice(pycorpora.humans.firstNames["firstNames"])).capitalize()
     pd[LASTNAME_TAG] = mutateWord(random.choice(pycorpora.humans.lastNames["lastNames"])).capitalize()
     pd[FULLNAME_TAG] = pd[FIRSTNAME_TAG] + " " + pd[LASTNAME_TAG]
-    pd[HOMETOWN_TAG] = makeCityName()
+    pd[HOMETOWN_TAG] = makeplacename.makePlaceName()
     makePronouns(pd)
     pd[RACE_TAG] = random.choice(getList("races.txt"))
 
     return pd
-
-def makeCityName():
-    cities = getList("cities.txt")
-    baseName = random.choice(cities)
-    return mutateWord(baseName).capitalize()
 
 def makePronouns(pd):
     d100 = random.randrange(0,100)

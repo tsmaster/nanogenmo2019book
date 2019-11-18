@@ -18,6 +18,7 @@ import makefeastchapter
 import makepigchapter
 import makepoem
 from makepoem import Language, Word
+import makeplacename
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
@@ -41,13 +42,6 @@ def makeMissionObject():
     if isVowel(adjective[0]):
         article = "an"
     return ' '.join([article, adjective, noun])
-
-def makePlaceName():
-    s = ''
-    wordLen = random.randrange(4,8)
-    for i in range(wordLen):
-        s += random.choice(string.ascii_lowercase)
-    return s.capitalize()
 
 def makeHonorific(gender):
     table = {GENDER_MALE_TAG: 'sir',
@@ -89,7 +83,7 @@ def makeHappilyEverAfterChapter():
 
 def makeMissionParagraph(storyDict):
     missionObject = makeMissionObject()
-    placename = makePlaceName()
+    placename = makeplacename.makePlaceName()
     monster = makeMonsterName()
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
@@ -158,7 +152,7 @@ while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
     reportProgress(chapters)
     print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
-    chapters.append(makemobychapter.makeMobyChapter(missionObj, 800, FAKE_GPT2))
+    chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
     reportProgress(chapters)
     print ("making poem chapter {0}".format(len(chapters)))
     chapters.append(makepoem.makePoemChapter(storyDict))
