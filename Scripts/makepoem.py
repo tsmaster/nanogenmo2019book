@@ -130,8 +130,13 @@ def makeLine(lang, sylCount, rhymeLine):
             words.insert(0, cw)
     return words
 
+class WordTooLongForLineException(Exception):
+    pass
+
 def makeLineEndsWithWord(lang, sylCount, word):
     words = [word]
+    if word.syllable_count > sylCount:
+        raise WordTooLongForLineException
 
     while (getSylCountForWordList(words) < sylCount):
         scfwl = getSylCountForWordList(words)
@@ -171,7 +176,27 @@ poemPatterns = {
         (10, 'A'), (10, 'B'), (10, 'B'), (10, 'A'),
         (10, 'C'), (10, 'D'), (10, 'E'),
         (10, 'C'), (10, 'D'), (10, 'E')],
-    }
+    'sonnet-dave': [
+        (10, 'A'), (10, 'A'), (10, 'A'),
+        (10, 'B'), (10, 'B'), (10, 'B'),
+        (10, 'C'), (10, 'C'),
+        (10, 'D'), (10, 'D'), (10, 'D'),
+        (10, 'E'), (10, 'E'), (10, 'E'),
+    ],
+    'fib': [
+        (1, 'A'), (2, 'B'), (3, 'A'),
+        (5, 'A'), (8, 'B'), (13, 'A')],
+    'pi': [
+        (3, 'A'), (1, 'A'), (4, 'B'),
+        (1, 'A'), (5, 'A'), (9, 'A'),
+        (2, 'B'), (6, 'B'), (5, 'A'),
+        (4, 'B')],
+    'prime': [
+        (2, 'A'),
+        (3, 'B'), (5, 'B'), (7, 'B'),
+        (11, 'C'), (13, 'C'),
+        (17, 'D'), (19, 'D')],
+}
 
 def printPoems():
     for pk in poemPatterns:
@@ -183,6 +208,56 @@ def findRhymeKeys(lang, numRhymes):
     for k, words in lang.words.items():
         if len(words)>= numRhymes:
             yield k
+
+def genBindings(rhymeSections, rhymeCountsDict):
+    # rhymeSections is a list of sections
+    # rhymeCountsDict maps chars to counts
+    # the binding returns a dictionary mapping chars to sections
+
+    chars = list(rhymeCountsDict.keys())
+    while True:
+        random.shuffle(chars)
+        usedSections = []
+        outDict = {}
+        for c in chars:
+            while True:
+                sect = random.choice(rhymeSections)
+                if sect in usedSections:
+                    continue
+                outDict[c] = sect
+                usedSections.append(sect)
+                break
+        yield outDict
+
+def genPoemsFromPattern(lang, pattern):
+    rhymeCountsDict = {}
+    for syl, rhymeKey in pattern:
+        count = rhymeCountsDict.get(rhymeKey, 0)
+        rhymeCountsDict[rhymeKey] = count + 1
+    maxKeys = 0
+    for key, val in rhymeCountsDict.items():
+        maxKeys = max(maxKeys, val)
+    rhymeKeys = list(findRhymeKeys(lang, maxKeys))
+    random.shuffle(rhymeKeys)
+    for b in genBindings(rhymeKeys, rhymeCountsDict):
+        try:
+            # b is a map of rhymeKeys ('A', 'B') to word rhyming sections (e.g. 'AH T EN')
+            lastWords = ['?'] * len(pattern)
+            lines = ['?'] * len(pattern)
+            for lineNum, pat in enumerate(pattern):
+                sylCount, rhymeChar = pat
+                rhymeSect = b[rhymeChar]
+                while True:
+                    rhymeWord = random.choice(lang.words[rhymeSect])
+                    if not (rhymeWord in lastWords):
+                        break
+                lastWords[lineNum] = rhymeWord
+                lineAsWordList = makeLineEndsWithWord(lang, sylCount, rhymeWord)
+                lines[lineNum] = ' '.join([str(w) for w in lineAsWordList])
+            poem = '\n'.join(lines)
+            yield (poem + '\n\n')
+        except WordTooLongForLineException:
+            print("too long, trying again")
 
 def genLimericks(lang):
     rhymeKeys = list(findRhymeKeys(lang, 3))
@@ -229,6 +304,108 @@ def foreverLimericks(lang):
         addWordsToLanguage(lang, 100)
         lang.writeToDisk("nonsense.json")
 
+def makeLimerickChapterText(lang):
+    numPars = random.randrange(5, 25)
+
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns['limerick'])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makeEngSonnetChapterText(lang):
+    numPars = random.randrange(4, 16)
+    patName = 'sonnet-eng'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makeItalSonnetChapterText(lang):
+    numPars = random.randrange(4, 16)
+    patName = 'sonnet-ital'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makeMixedSonnetChapterText(lang):
+    numPars = random.randrange(4, 16)
+
+    output = ""
+
+    engGen = genPoemsFromPattern(lang, poemPatterns['sonnet-eng'])
+    italGen = genPoemsFromPattern(lang, poemPatterns['sonnet-ital'])
+    
+    for i in range(0, numPars, 2):
+        output += next(engGen)
+        output += next(italGen)
+    return output
+
+def makeDaveSonnetChapterText(lang):
+    numPars = random.randrange(4, 16)
+    patName = 'sonnet-dave'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makeHaikuChapterText(lang):
+    numPars = random.randrange(5, 20)
+    patName = 'haiku'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makeFibChapterText(lang):
+    numPars = random.randrange(5, 10)
+    patName = 'fib'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makePiChapterText(lang):
+    numPars = random.randrange(3, 10)
+    patName = 'pi'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+def makePrimeChapterText(lang):
+    numPars = random.randrange(7, 13)
+    patName = 'prime'
+    
+    output = ""
+    for i, lim in enumerate(genPoemsFromPattern(lang, poemPatterns[patName])):
+        if i > numPars:
+            break
+        output += lim
+    return output
+
+
+
 def makePoemChapter(storyDict):
     lang = readLangFromDisk("nonsense.json")
     print("lang:", type(lang))
@@ -242,20 +419,27 @@ def makePoemChapter(storyDict):
     monster = random.choice(monsterList)
     output = "This reminds me of a poem told to me by a {0}.\n\n".format(monster)
 
-    numPars = random.randrange(5, 25)
-    
-    for i, lim in enumerate(genLimericks(lang)):
-        if i > numPars:
-            break
-        output += lim
-        output += "\n"
+    makeBodies = [
+        makeLimerickChapterText,
+        makeEngSonnetChapterText,
+        makeItalSonnetChapterText,
+        makeMixedSonnetChapterText,
+        makeHaikuChapterText,
+        makeDaveSonnetChapterText,
+        makeFibChapterText,
+        makePiChapterText,
+        makePrimeChapterText,
+    ]
 
+    bodyFact = random.choice(makeBodies)
+    
+    output += bodyFact(lang)
     title = "a {0} poem".format(monster)
     return makechapter.Chapter(1, title, output)
 
 if __name__ == "__main__":
     lang = readLangFromDisk("nonsense.json")
 
-    #foreverLimericks(lang)
     sd = storydict.makeStoryDict()
     print(makePoemChapter(sd))
+
