@@ -1,3 +1,5 @@
+Links for stuff to maybe use:
+---
 https://www.nltk.org/ natural language toolkit
   can do sentiment analysis
 https://github.com/aparrish/pytracery PyTracery
@@ -19,3 +21,11 @@ TextaCy
 Big List of RPG Plots (S. John Ross) formatted for easier lookup:
 https://boardgamegeek.com/blogpost/20146/turning-big-list-rpg-plots-random-generator
 
+
+
+Sources for various pieces:
+---
+food lists come from hand-scraping wikipedia
+monsters are a combination of Dungeons and Dragons Open Gaming License SRD monster list, and my own Shapeshifting RPG monster list.
+corpora comes from Darius Kazemi
+pycorpora, pincelate, pronouncing comes from Allison Parrish

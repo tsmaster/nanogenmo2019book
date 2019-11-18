@@ -22,7 +22,7 @@ if sys.version_info[0] < 3:
 
 TARGET_WORD_COUNT = 12000
 
-FAKE_GPT2 = False
+FAKE_GPT2 = True
 
 missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
 missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
@@ -85,30 +85,30 @@ def makeHappilyEverAfterChapter():
     text = "And they all lived happily ever after. That is the end of the story, until we tell another tale."
     return makechapter.Chapter(7, "Resolutions", text)
 
-def makeMissionParagraph():
+def makeMissionParagraph(storyDict):
     missionObject = makeMissionObject()
     placename = makePlaceName()
     monster = makeMonsterName()
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
-    text = "And then he went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, he found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2)
-    return text
-    
+    text = "And then {5} went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, {5} found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2, storydict.getHeroHeShePronoun(storyDict))
+    return text, missionObject, monster, placename
 
-def makeMissionChapter():
+def makeMissionChapter(storyDict):
     numParas = random.randrange(10, 20)
     text = ""
     for i in range(numParas):
-        text += makeMissionParagraph()
+        partext, missionobj, monster, placename = makeMissionParagraph(storyDict)
+        text += partext
         text += "\n\n"
+
+    fetchTitle = "A mission to fetch a " + missionobj
+    killTitle = "A mission to kill a " + monster
+    cityTitle = "A mission to visit " + placename
+
+    chapterTitle = random.choice([fetchTitle, killTitle, cityTitle])
     
-    missionObject = makeMissionObject()
-    placename = makePlaceName()
-    monster = makeMonsterName()
-    treasure1 = makeTreasure()
-    treasure2 = makeTreasure()
-    text += "And then he went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, he found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2)
-    return makechapter.Chapter(1, "A Mission to fetch a {0} and kill a {1}".format(missionObject, monster), text)
+    return makechapter.Chapter(1, chapterTitle, text)
 
 def makePigChapter():
     text = 'And then the Orange Baby Pig said "Yeah, but I\'m going to need you to do me a favor first. I want 100 of the best hamberders. And so he went and got some hamberders. And they were fine, I guess. And the Orange Baby Pig was happy. There must have been a lot of birds around, because you could hear so much happy tweeting.'
@@ -151,7 +151,7 @@ chapters = [
 
 while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     print ("making mission chapter {0}".format(len(chapters)))
-    chapters.append(makeMissionChapter())
+    chapters.append(makeMissionChapter(storyDict))
     reportProgress(chapters)
     # TODO fetch monster from recent mission
     monster = makeMonsterName()
