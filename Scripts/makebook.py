@@ -4,6 +4,7 @@ import sys
 import random
 import string
 import time
+import datetime
 
 import makechapter
 import colors
@@ -181,6 +182,12 @@ reportProgress(chapters)
 renumber(chapters)
 
 s = formBook(chapters)
-with open("book.txt", "wt") as f:
-    f.write(s)
+
+timeLabel = datetime.datetime.now().strftime("draft_%Y_%m_%d_%H_%M")
+draftFilename = "../DraftBooks/{0}_{1}.txt".format(timeLabel, TARGET_WORD_COUNT)
+rootFilename = "../book.txt"
+
+for fn in [draftFilename, rootFilename]:
+    with open(fn, "wt") as f:
+        f.write(s)
 
