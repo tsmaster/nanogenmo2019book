@@ -20,7 +20,7 @@ from makepoem import Language, Word
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 10000
+TARGET_WORD_COUNT = 12000
 
 FAKE_GPT2 = False
 
@@ -85,13 +85,29 @@ def makeHappilyEverAfterChapter():
     text = "And they all lived happily ever after. That is the end of the story, until we tell another tale."
     return makechapter.Chapter(7, "Resolutions", text)
 
-def makeMissionChapter():
+def makeMissionParagraph():
     missionObject = makeMissionObject()
     placename = makePlaceName()
     monster = makeMonsterName()
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
     text = "And then he went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, he found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2)
+    return text
+    
+
+def makeMissionChapter():
+    numParas = random.randrange(10, 20)
+    text = ""
+    for i in range(numParas):
+        text += makeMissionParagraph()
+        text += "\n\n"
+    
+    missionObject = makeMissionObject()
+    placename = makePlaceName()
+    monster = makeMonsterName()
+    treasure1 = makeTreasure()
+    treasure2 = makeTreasure()
+    text += "And then he went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, he found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2)
     return makechapter.Chapter(1, "A Mission to fetch a {0} and kill a {1}".format(missionObject, monster), text)
 
 def makePigChapter():
@@ -139,7 +155,7 @@ while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     reportProgress(chapters)
     # TODO fetch monster from recent mission
     monster = makeMonsterName()
-    print ("making feast of {0} chapter {1}".format(len(chapters), monster))
+    print ("making feast of {1} chapter {0}".format(len(chapters), monster))
     chapters.append(makefeastchapter.makeFeastChapter(monster, storyDict))
     reportProgress(chapters)
     # TODO pull item from inventory

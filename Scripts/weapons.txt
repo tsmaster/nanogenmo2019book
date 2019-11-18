@@ -1,191 +1,175 @@
+adze
+ahlspiess
+arbalest
+arquebus
+atlatl
 awl pike
+axe club
+backsword
 bandyclef
 bardiche
 bat wing carseque
+battle axe
 bec de corbin
+bilbo
+bill
 bill hook
+blowgun
+blunderbuss
+bo
+board sword
 bohemian ear spoon
+bolo
+boomerang
+brandistock
 brass knuckles
+broad axe
 broadsword
+bullwhip
+cannon
 carseque
 cestus
+chakram
+claymore
+club
+composite bow
+corseque
+crop
+crossbow
+crow bill
+cutlass
+dadao
 dagger
+dane axe
+dao
+darts
 deer horn knife
+dha
+dory
+emeici
+english longbow
+epee
+epsilon axe
+estoc
+falchion
+falx
+fan
 fauchard
 fauchard fork
 finger knife
+fire arrow
+fire lance
+flail
+flamberge
+flame bladed sword
+flatbow
+flyssa
+fu
 fukaro yori
+gastraphetes
+gladius
 glaive
 glaive guisarme
+golok
+great sword
 guisarme
+hafted axe
 halberd
-javelin
-lochaber axe
-longspear
-lucern hammer
-military fork
-myrmex
-nagamaki
-naginata
-ox tongue
-partisan
-pike
-pole axe
-ranseur
-scythe
-spetum
-sphairai
-trident
-tiger claws
-voulge
-katar
-fan
-pata
-push dagger
-tekko
-emeici
-cutlass
-dao
-dha
-falchion
+hammer
+hand axe
+hand cannon
+harpoon
+hatchet
+horseman's pick
+hungarian bow
 hunting sword
+ida
+javelin
+jian
+jo
+kama
 kampilan
+katar
 khopesh
 klewang
-messer
-nimcha
-pulwar
-saber
-scimitar
-shashka
-backsword
-epee
-estoc
-flamberge
-flyssa
-ida
-jian
-long sword
-rapier
-side sword
-falx
-board sword
-claymore
-dadao
-flame bladed sword
-parade sword
-great sword
-two handed sword
-lowland sword
-bilbo
-bolo
-gladius
-swiss dagger
-xiphos
-golok
 kris
 kukri
-sickle
-crow bill
-kama
-mattock
-pick axe
-war hammer
-adze
-bardiche
-battle axe
-broad axe
-axe club
-dane axe
-hafted axe
-viking axe
-fu
-hand axe
-hatchet
+kunai
+lance
+lasso
+lochaber axe
 long bearded axe
-tomahawk
-crop
-club
-bo
-flail
-hammer
-horseman's pick
-jo
+long sword
+longspear
+lowland sword
+lucern hammer
 macana
 mace
 mallet
-morning star
-rock
-sai
-shillelagh
-scepter
-sledge hammer
-sword mace
-tonfa
-tekkan
-war hammer
-wrench
-xyston
-svardstav
-naginata
-Bardiche
-Bec de Corbin
-Bill
-Bohemian ear spoon
-Brandistock
-Lochaber axe
-Military fork
-Partisan
-Ranseur
-Scottish polearms
-Sovnya
-Spetum
-Viking halberd
-War scythe
-Corseque
-quarter staff
-ahlspiess
-dory
-lance
-pike
-pitchfork
-military fork
-epsilon axe
 man catcher
+mattock
+messer
+military fork
 monk's spade
-rhomphaia
-war scythe
-spear
-javelin
-harpoon
-pilum
-boomerang
-chakram
-shuriken
-kunai
-throwing knife
-darts
-swiss arrow
-english longbow
-flatbow
-self bow
-composite bow
-hungarian bow
-arbalest
-crossbow
-stonebow
-gastraphetes
-sling
-blowgun
-arquebus
-blunderbuss
-cannon
-fire arrow
-fire lance
-hand cannon
-bullwhip
+morning star
+myrmex
+nagamaki
+naginata
+nimcha
 nunchaku
-flail
-lasso
+ox tongue
+parade sword
+partisan
+pata
+pick axe
+pike
+pilum
+pitchfork
+pole axe
+pulwar
+push dagger
+quarter staff
+ranseur
+rapier
+rhomphaia
+rock
 rope dart
-atlatl
+saber
+sai
+scepter
+scimitar
+scottish polearms
+scythe
+self bow
+shashka
+shillelagh
+shuriken
+sickle
+side sword
+sledge hammer
+sling
+sovnya
+spear
+spetum
+sphairai
+stonebow
+svardstav
+swiss arrow
+swiss dagger
+sword mace
+tekkan
+tekko
+throwing knife
+tiger claws
+tomahawk
+tonfa
+trident
+two handed sword
+viking axe
+viking halberd
+voulge
+war hammer
+war scythe
+wrench
+xiphos
+xyston

@@ -1,13 +1,1847 @@
-zyqxuwy
-dwarf
-elf
-human
-drow
-floating eye beast
-kobold
-dragon
-effrit
+aarakocra
+abishai
+abjurer
+aboleth
+abomination with huge claws
+abyssal wretch
+acolyte
+air elemental
+albino dwarf warrior
+aldani
+alhoon
+alkilith
+allip
+allosaurus
+almiraj
+ambush drake
+amnizu
+an ancient demon from the forest that fights with all his might
+ancient bear
+ancient efreet
+ancient elf
+ancient lich
+ancient ogre
+angel
+ankheg
+ankylosaurus
+ankylosaurus zombie
+ant man
+ant spider
+antique demon lord
+antsnake
+apatosaurus
+ape
+ape beast
+ape god
+ape marmoset
+apprentice wizard
+arcane defender
+arcane voodoo
+arcane witch
+arcane witch's apprentice
+arcane wizard
+arcane wizard of the sun
+arcane wizard's apprentice
+archdemon
+archdruid
+archer
+archmage
+archon
+armanite
+asp
+assassin
+assassin vine
+astral dreadnought
+astrid merfolk
+astrid the merfolk
+atropal
+aurochs
+avatar of death
+avialanid
+awakened shrub
+awakened tree
+awakened zurkhwood
+axe beak
+azer
+azure dragon dragon
+baba lysaga's creeping hut
+babau
+baboon
+badger
+bael
+bald eagle
+balhannoth
+balor
+banderhobb
+bandit
+bandit captain
+banshee
+baphomet
+barbed
+bard
+barghest
+barlgura
+basilisk
+bat
+bat archmage
+batfish
+batman
+batwoman
+bazaar guard
+bear
+bear / tiger
+bear / wild boar
+bear ape
+bear with huge nose
+bear with huge trunk
+bear with large trunk
+bearded
+beast dragon
+beast human
+beast lord
+beast rider
+beastmaster
+beaver
+beetle
+behir
+beholder
+berbalang
+berserker
+big blue snake
+big ole' lance
+big red dragon
+bird
+bird of prey
+bird with yellow beak
+bird-breathing bird of prey
+bird-tooth salamander
+bison
+bitter viking
+black abishai
+black bear
+black dog
+black dragon
+black earth guard
+black earth priest
+black golem
+black iron golem
+black knight
+black mamba skeleton
+black owl
+black pudding
+black shark
+black sky crab
+black spider queen
+blackguard
+blackjack shrimp
+blind wolf
+blink dog
+blood hawk
+bloodthirster
+blue abishai
+blue dragon
+blue dragon lord
+blue mermaid
+blue scorpion
+blue slaad
+blue whale
+boar
+bobcat
+bodak
+body eater
+bog hermit
+boggle
+bone
+bone naga
+boneclaw
+boomerang snake
+brachiosaurus
+brain eating amoeba
+brass dragon
+british warrior
+brontosaurus
+bronze dragon
+brown and green bamboo
+brown bear
+buck
+buffalo
+bugbear
+bugbear chief
+bulette
+bulezau
+bull
+bull calf
+bull shark
+bullock
+bullywug
+burning giant wiggler
+burning snake
+cactus
+cadaver collector
+cambion
+camel
+carapace shark
+carrion crawler
+cat
+catfish
+catoblepas
+cattle
+cave fisher
+centaur
+centaur beetle
+centaur mummy
+centaur shapeshifter
+centaur zombie
+centipede
+chain
+champion
+chaos lord
+chaos mage
+chaos monster
+chaos spawn
+chaotic rogue
+chasme
+cheetah
+chicken
+chimera
+chitine
+choker
+choldrith
+chuul
+chwinga
+clams
+clay golem
+cloaker
+cloud giant
+cobra
+cockatoo
+cockatrice
+commoner
+conjurer
+constrictor snake
+copper dragon
+coral
+corpse flower
+couatl
+cougar
+cow
+cow calf
+coyote
+crab
+crag cat
+cranium rat
+crawling claw
+creature that would look exactly like a human with a large cockroach wing
+crocodile
+crow
+crushing wave priest
+crushing wave reaver
+crypt tiger
+cult fanatic
+cultist
+cursed monk
+cursed soldier
+cyclope
+cyclops
+cyclops rabbit
+cyclops skeleton
+dao
+dark arid
+dark cleric
+dark elf
+dark elf conjurer
+dark god
+dark guardian
+dark knight
+dark necromancer
+dark tide knight
+dark troll
+dark troll shaman
+dark troll warlord
+dark warrior
+dark wizard
+darkling
+darkling elder
+darkmantle
+dead man with no sword (or hand)
+dead priest
+deadwood
+death
+death dog
+death drake
+death knight
+death yak
+death's golem
+deathlock
+deathlock mastermind
+deathlock wight
+deathlord
+decapus
+deep dwarf
+deep elf annihilator
+deep elf conjurer
+deep elf fighter
+deep elf high priest
+deep elf summoner
+deep elf warpriest
+deep gnome
+deep scion
+deep troll
+deer
+defender of argus
+deinonychus
+demigod
+demilich
+demogorgon
+demon
+demon beast
+demon bride
+demon creature
+demon dragon
+demon god
+demon human
+demon hunter
+demon king
+demon knight
+demon knight's fire
+demon lord
+demon of death
+demon of destruction
+demon priest
+demon prince from giza
+demon princess
+demon queen
+demonspawn
+derro
+derro savant
+desert mouse
+desert rat
+devil
+devil (who just got back from hell)
+devil archer
+devil of death's road
+devil-cannibal
+devourer
+didelphis niger
+dimetrodon
+diplomatic seal
+dire elephant
+dire marmot
+dire troll
+dire wolf
+displacer beast
+diviner
 djinn
-ooze
-hydra
+dog
+dolphin
+dolphin commander
+dolphin rider
+dolphin sea-captain
+dolphin war-lord
+dolphin's eye squid
+donkey
+doom monster
+doomblade
+doppelganger
+draconian shifter
+draconian zealot
+draegloth
+draft horse
+dragon
+dragon fish
+dragon giants
+dragon king
+dragon knight
+dragon monk
+dragon priest
+dragon rider
+dragon snake
+dragon suit
+dragon turtle
+dragon vulture
+dragon warrior
+dragon zombie
+dragon's tears
+dragon-hunter
+dragon-lich
+dragon-seeker
+dragonclaw
+dragonfang
+dragonkin
+dragonlord
+dragonoid
+dragonsoul
+dragonwing
+drake lord
+dread warrior
+dreamwalker giant
+dressed up unicorn
+dretch
+drider
+drow
+drow arachnomancer
+drow elite warrior
+drow favored consort
+drow house captain
+drow inquisitor
+drow mage
+drow matron mother
+drow priestess of lolth
+drow shadowblade
+druid
+druid cleric
+druid monk
+druid of the claw
+druid of the flame
+druid of the storm
+dryad
+duck
+duckling
+duergar
+duergar darkhaft
+duergar despot
+duergar hammerer
+duergar kavalrachni
+duergar keeper of the flame
+duergar mind master
+duergar screamer
+duergar soulblade
+duergar spy
+duergar stone guard
+duergar warlord
+duergar xarrorn
+dungeon master
+dungeon spider
+duodrone
+dust mephit
+dwarf
+dwarf giant
+dwarf moth
+dwarff warrior
+dybbuk
+eagle
+earth
+earth elemental
+earth elementalist
+earth golem
+earth spirit warrior
+earth spirit wizard
+earth worm
+eblis
+ebon vanguard
+echidna
+effrit
+efreet
+eidolon
+elasmotherium
+elder brain
+elder tempest
+eldritch kangoroth
+eldritch warchief
+eldritch wizard
+elemental chaos spawn
+elemental demon lord
+elemental destruction
+elemental elementalist
+elemental equilibrium
+elementalism
+elementalist
+elementalist's champion
+elementalist's companion
+elementalist's ward
+elephant
+elephant cat
+elephant cub
+elf
+elf knight
+elf raider
+elf warrior
+elf warrior of legend
+elf zombie
+elk
+elven warrior of legend of blood
+empyrean
+enchanter
+erinyes
+eternal flame guardian
+eternal flame priest
+ettercap
+ettin
+ettin simulacrum
+evil archon
+evil bard
+evil bear
+evil ghost
+evil wizard
+evoker
+eye boss
+faerie dragon
+favoriaerisaur
+feral dog
+fermenticeratops carcharodon
+festering horror
+final boss
+fire devil
+fire dragon
+fire drake
+fire elemental
+fire giant
+fire giant shapeshifter
+fire giant simulacrum
+fire giant skeleton
+fire hydra
+fire imp
+fire maiden
+fire monster
+fire ogre
+fire queen
+fire shaman
+fire snake
+fire troll
+fire troll's fire
+fire wight
+fire wight warg
+fire wizard
+fire worm
+fire-cannibal
+fire-demon
+fire-fiend
+fire-seeker
+firenewt warlock of imix
+firenewt warrior
+fish
+fish cavalry
+fish skirmisher
+fish war-lord
+flail snail
+flame elemental
+flame giant
+flame monster
+flame troll
+flame-cannibal
+flame-seeker
+flameskull
+flamethrower
+flamewrath
+flesh golem
+flind
+floating eye beast
+flumph
+flying monkey
+flying snake
+fomorian
+fox
+fraz-urb'luu
+freezing wraith
+frog
+froghemoth
+frost crab
+frost elementalist
+frost gargoyle
+frost giant
+frost giant simulacrum
+frost mage
+frost worm
+frostbite spider
+frostwolf queen
+full color render
+fungus
+galeb duhr
+gargoyle
+gargoyle warg 
+gargoyle warrior with horns of ice and fire and a fire elemental's flame resistance bonus
+gargoyle zombie
+gauth
+gazer
+gelatinous cube
+gelid demonspawn
+genie
+geonid
+ghast
+ghost
+ghost crab
+ghost dragon tail
+ghost moth
+ghost moth simulacrum
+ghostly drake
+ghostly hell hound
+ghoul
+giant
+giant air dragon
+giant air giant (sans the air)
+giant air wyrm
+giant amoebae
+giant anteater
+giant ape
+giant badger
+giant bat
+giant bear
+giant beetle
+giant boar
+giant centaur
+giant centipede
+giant cephalopods
+giant chimpanzee
+giant clawed octopus
+giant cockroach
+giant cockroach king
+giant cockroach queen
+giant constrictor snake
+giant crab
+giant crayfish
+giant crocodile
+giant demon
+giant dragon
+giant eagle
+giant earth dragons
+giant earth dragons (sans the ground)
+giant earth mite
+giant earth wyrm
+giant earthworm
+giant elephant
+giant elk
+giant eyeball
+giant fire beetle
+giant fire dragons
+giant fire giant
+giant fire giant (sans the fire)
+giant fire wyrm
+giant fish
+giant fly
+giant frog
+giant frog skeleton
+giant gecko
+giant gnome
+giant goat
+giant hyena
+giant ice toad
+giant ice wyrm
+giant jaguar
+giant jellyfish
+giant kangaroo
+giant land sloth
+giant lava dragon
+giant lemur
+giant lemure
+giant lightning dragon
+giant lightning eel
+giant lizard
+giant mantis
+giant mummified corpse
+giant octopus
+giant owl
+giant ox
+giant poisonous snake
+giant rat
+giant robot
+giant rot grub
+giant salamander spider
+giant sand flea
+giant sand leech
+giant scorpion
+giant sea horse
+giant sea wyrm
+giant shark
+giant skeleton
+giant slither
+giant sloth
+giant slug
+giant snapping turtle
+giant spider
+giant spider queen
+giant spider salamander
+giant spider toad
+giant squid
+giant starcursed mass
+giant stone giant
+giant strider
+giant subterranean lizard
+giant tarantula shapeshifter
+giant tiger
+giant toad
+giant toad spider
+giant tree vampire king
+giant tuna
+giant vulture
+giant warg
+giant wasp
+giant water dragon
+giant water giant (sans the water)
+giant water wyrm
+giant weasel
+giant wind wyrm
+giant wolf spider
+giant zombie
+gibbering mouther
+giff
+giraffe
+girallon
+girallon zombie
+githyanki gish
+githyanki kith'rak
+githyanki knight
+githyanki supreme commander
+githyanki warrior
+githzerai anarch
+githzerai enlightened
+githzerai monk
+githzerai zerth
+glabrezu
+gladiator
+glider lizard
+gnoll
+gnoll archer
+gnoll chieftain
+gnoll fang of yeenoghu
+gnoll flesh gnawer
+gnoll hunter
+gnoll monk
+gnoll pack lord
+gnoll paladin
+gnoll shaman
+gnoll warlock
+gnoll warrior
+gnoll witherling
+gnome
+gnome artificer
+gnome monk
+gnomes
+goat
+goblin
+goblin bard
+goblin blastmage
+goblin boss
+goblin fighter
+goblin fighter mage
+goblin king
+goblin knight
+goblin mage
+goblin ranger
+goblin sorcerer wizard
+goblin warg
+goblin zombie
+goddesses of war
+gold dragon
+golden dragon
+golden-winged
+golem spider
+goose
+gordian lance
+gorgon
+gorilla
+goristro
+gray ooze
+gray render
+graz'zt
+great white
+great white shark
+greater zombie
+green death hound
+green dragon
+green golem
+green goo
+green hag
+green lion
+green rat
+green sea otter
+green serpent
+green slaad
+green stone golem
+green wolf
+green wolf dragon
+grell
+grey eagle
+grick
+grick alpha
+griffon
+grimlock
+grung
+grung elite warrior
+grung wildling
+guard
+guard drake
+guard with halberd
+guard with mace of protection
+guard with shield
+guardian goddess
+guardian naga
+guardian of argus
+guardian of the forest
+guardian portrait
+guardian shaman
+gurgling mouther
+hadrosaurus
+half elf
+half ogre
 harpy
+harpy lord
+harpy skeleton
+hatching spider
+hawk
+hawksbill falcon
+hell beast
+hell hog
+hell hound
+hell knight
+hell knight skeleton
+hell kraken
+hell warrior
+hellfire engine
+hellhound
+hellion
+hellknight
+hellwing
+hellwing dragon
+hellwing dragon simulacrum
+helmed horror
+hen
+hezrou
+highguard
+hill giant
+hill giant zombie
+hippogriff
+hippopotamus
+hippopotamus and hyena
+hiragana katanas
+hobgoblin
+hobgoblin captain
+hobgoblin devastator
+hobgoblin iron shadow
+hobgoblin warlord
+hog
+holy cleric
+holy druid
+homoornithosaurus
+homunculus
+hook horror
+horned
+hornet
+horror warg
+horror zombie
+horse
+hound
+hound of nurgle
+hound skeleton
+house cat
+howler
+howling hatred
+howling hatred initiate
+howling hatred priest
+huge red dragon
+hulking crab
+human
+human archer
+human guard
+human hunter
+human monk
+human shaman
+human spy
+human thief
+human zombie
+human-esque monster
+hunch-monkey
+hunter shark
+hutijin
+hydra
+hydra zombie
+hyena
+hyla panda
+hylaeosaurs
+hylicosaurus
+hylomorphs
+hyloxodon
+hyrax
+ice bard
+ice demon
+ice dragon
+ice dragon shapeshifter
+ice dragon zombie
+ice drake
+ice giant
+ice giant skeleton
+ice giant zombie
+ice god
+ice king
+ice mephit
+ice monster
+ice queen
+ice sorcerer
+ice spirit
+ice statue
+ice toad
+ice wizard
+ice wolves
+ice-eared goblin
+ichthyosaur
+icy scorpion
+iguana spider
+illithilich
+illusionist
+imp
+incubus
+intellect devourer
+invisible stalker
+invisible wizard
+iron butterfly
+iron golem
+iron troll
+iron warlock
+ironforge rifleman
+ixitxachitl
+jack shrimp
+jackal
+jackalwere
+jaculi
+jade maiden
+jaguar
+jaguar cub
+jaguar cub of the sea
+jaguar mimic
+japanese star
+japanese warrior
+japanese warriors and vikings
+jellyfish
+juiblex
+kalka-kylla
+kamadan
+kangaroo
+kangaroo geographus leucogaster
+kangaroos and giant anteaters
+kelpie
+kenku
+ki-rin
+killer bee
+killer bee dressed as a witch
+killer bee flying
+killer bee in a suit of armor which flies off and kills whoever tries to catch it
+killer bee that flies without wings
+killer bee that grows wings out and then doesn't grow more wings
+killer bee where its wings are hanging off of its body
+killer bee with a head sticking out and two wings attached
+killer bee with its eyes blown out of its skull
+killer bee with its face burnt off
+killer bee with wings attached
+killer bee with wings in its abdomen
+killer leech
+killer whale
+king crab
+king fish
+king king crab
+king mantis
+king of demons
+king shark of tasmania
+king squid
+kite with wings
+knight
+kobold
+kobold demon lord
+kobold demonologist
+kobold dragonshield
+kobold druid
+kobold familiar summoner
+kobold hunter
+kobold inventor
+kobold raider druid
+kobold scale sorcerer
+kobold shaman
+kobold summoner
+kobold zombie
+kokodo
+kokodo dragon
+komodo dragon
+korred
+krahulik
+kraken
+kraken priest
+krill
+kruthik
+kruthik hive lord
+kuo-toa
+kuo-toa archpriest
+kuo-toa whip
+lamia
+land hag
+lantadyogma bryantii
+large demon
+large hairy louse
+large hornet
+large louse
+large moth
+large serpent
+large sloth
+large slug
+large snapping turtle
+large spiderling
+lemure
+leopard
+leucobatid
+leucodon
+leucrotta
+leviathan
+lich
+lich king's warchief
+lich lord
+lightning bolt dragon
+lightning demon
+lightning monster
+lightning whelk
+lion
+little giant bear
+littoral shark
+lizard
+lizard king
+lizard queen
+lizardfolk
+lizardfolk shaman
+lizards and turtles
+lobster
+lobster on fire
+lobsterfolk
+lynx
+mackerel
+mad cow
+mage
+maggot
+magical rogue sorceress
+magma mephit
+magmin
+magus of knowledge
+mahi mahi
+malformed kraken
+mammals
+mammoth
+man in black
+man in blue
+man trap
+man with two eyes
+manatee
+manatee shark
+maniraptoran
+manos
+manta ray
+manticore
+manticore spider
+mantis panther
+mantrap
+marauder king
+marauding zebra
+marid
+marilith
+marlin
+marmoset ape
+marmoset spider
+martial arts adept
+marut
+master thief
+mastiff
+mastodon
+maurezhi
+maw demon
+maze master
+meazel
+medusa
+meenlock
+megalodon
+mephit
+merchant captain
+merchant master
+merfolk
+merfolk wizard
+merfolk zombie
+mermaid
+mermaid zombie
+merman soldier
+merregon
+merreno
+merrow
+metal golem
+metallic golem
+mimic
+mind flayer
+mind flayer lich
+mindwitness
+mink
+minor demon
+minotaur
+minotaur skeleton
+moddled mammal dragon
+modron
+mollusc
+moloch
+molydeus
+mongoose
+mongrelfolk
+monk
+monkey
+monkey spider
+monodrone
+monster lord
+monster master
+monster with a head
+monster with an eye
+monster with wings
+moose
+morkoth
+moth dwarf
+moth of wrath
+moth shapeshifter
+mottled dragon
+mottled dragon mammal
+mountain bear
+mountain hag
+mountain lion
+mouse fighter
+mouser spider
+mule
+mummy
+mummy lord
+mummy priest
+mummy priest with a big maw
+mummy zombie
+musketeer
+mutant
+myconid adult
+myconid sovereign
+myconid sprout
+myrmidon
+nabassu
+naergoth bladelord
+naga
+naga beastman
+naga knight
+naga magi
+naga master
+naga queen
+naga ritualist
+naga sharpshooter
+naga warrior
+naga zombie
+nagpa
+nalfeshnee
+napa naga
+narzugon
+naval officer
+naval officer skirmish sergeant
+navy commander
+navy commander sailor's squad
+necromancer
+needle blight
+nekodo
+neogi
+neogi hatchling
+neogi master
+neothelid
+nereid
+night hag
+night witch
+nightbane
+nightmare
+nightwalker
+nilbog
+noble
+noctilucent ogre monster
+noctilucent slime creature zombie
+noise swamp creature
+noise swamp hound
+noise swamp urchin
+nothic
+nupperibo
+nymph
+oblex
+oblex spawn
+ocean lamprey
+ochre jelly
+octopode
+octopus
+ogre
+ogre battering ram
+ogre bolt launcher
+ogre chain brute
+ogre howdah
+ogre lord
+ogre mage
+ogre priest
+ogre shapeshifter
+ogre warrior
+ogre zombie
+ogremech
+oingo
+oino
+oklob plant
+one-eyed shiver
+oni
+ooklob plant
+ooze
+ooze master
+orc
+orc blade of ilneval
+orc claw of luthic
+orc demon
+orc eye of gruumsh
+orc hand of yurtrus
+orc high priest
+orc knight
+orc monk
+orc nurtured one of yurtrus
+orc priest
+orc red fang of shargaas
+orc shaman
+orc sorcerer
+orc war chief
+orc warrior
+orc warrior shapeshifter
+orc warrior zombie
+orc witch
+orc youth
+orc zombie
+orcish monk
+orcish paladin
+orcish warlord
+orcish warrior
+orcus
+oread
+orog
+orthon
+ostrich
+otyugh
+owl
+owlbear
+paladin
+paladin magus of the fire
+paladin of death
+paladin of peace
+paladin of protection
+paladin of the cold
+paladin of the earth
+paladin of the fire
+paladin of the moon
+paladin of the peace-bringing sun
+paladin of the rain
+paladin of the storm
+paladin of wisdom
+pancake warrior
+pancakes fighter & vikings
+panda
+panther
+pegasus
+pentadrone
+peryton
+peter shark
+phantasmal warrior
+phantom warrior
+phase spider
+pheasant
+phoenix
+piercer
+pig
+pigeon
+pincushion
+pink and purple cedar tree
+pirate
+pirate ship
+pit fiend
+pixie
+plesiosaur
+plesiosaurus
+poisonous frog
+poisonous snake
+polar bear
+pony
+powerful witch
+priest
+priest of love
+priest of the holy holy light
+priest of the peace-bringing star
+priest of the peace-bringing sun
+priest of the rain
+priest of the water
+procompsognathus
+pseudodragon
+pterafolk
+pteranodon
+puffer fish
+pufferfish
+pug
+puma
+purple worm
+quadrone
+quaggoth
+quasit
+queen of the forest
+queen of thunder
+queen penguin
+quetzalcoatlus
+quickling
+quipper
+rabbit
+rabbit mimic
+raccoon
+rakshasa
+rakshasa lord
+ranger
+raptor
+rare elf
+rat
+rat goblet knight
+rat goblet knight fighter
+rat goblet knight fighter soldier
+rat goblet knight fighter soldier knight
+rat goblin fighter
+rat goblin mage
+rat goblin mage fighter
+rat goblin master fighter
+rat goblin master fighter archer
+rat goblin priest
+rat goblin ranger
+rat goblin shaman
+rat goblin shaman fighter
+rat goblin sniper
+rat goblin soldier
+rat goblin soldier fighter
+rat goblin soldier fighter paladin
+rat goblin soldier sniper fighter
+rat goblin warlock fighter
+rat goblin warrior fighter
+rat goblin warrior fighter fighter mage archer
+rat goblin warrior fighter mage
+rat goblin warrior fighter shaman
+rat goblin witch fighter
+rat goblin wizard fighter
+rat goblin wizard fighter shaman
+rat kin
+rat king
+rat master
+rat ogre
+rat ogre soldier
+rat pikeman
+rat pirate
+rat raider
+rat warrior
+rat wizard
+rat zombie
+ratfolk
+raven
+ravener hawk
+ravenous worm
+razerblast
+red abishai
+red devil skeleton
+red draconian simulacrum
+red dragon
+red dragonfly
+red golem
+red panther
+red wasp zombie
+red whale
+red-spotted starling
+redcap
+reef shark
+remorhaz
+reptile
+reptiles of birds
+retriever
+revenant
+rhino
+rhinoceros
+riding horse
+roc
+rock troll zombie
+rooster
+roper
+rottweiler
+rufousaur
+rust monster
+rutterkin
+saber-toothed tiger
+sabertooth mammoth
+sabertooth tiger
+sahuagin
+sahuagin baron
+sahuagin priestess
+sailor of hell
+saints and warriors
+salamander
+salmon
+sand eel
+sand manatee
+sand mantis
+sand muck shark
+sand scorpion
+sand shark
+sand shrimp
+satyr
+scarab
+scarab queen
+scarecrow
+scorpion
+scorpion guy
+scorpion manatee
+scorpion zombie
+scout
+sea hag
+sea horse
+sea lion
+sea monster
+sea serpent
+sea snake
+sea snake ghost
+sea snake queen
+sea snake queen of the deep
+sea snake rider
+sea snake shapeshifter
+sea spawn
+sea sponge
+sea urchin
+sea urchins
+sea-captain
+sea-captain skirmish captain
+sea-lord cavalry commander
+sea-shooter
+sea-warlord
+sea-warlord skirmish commander
+serpent
+serpent-seeker
+shadar-kai gloom weaver
+shadar-kai shadow dancer
+shadar-kai soul monger
+shadow
+shadow archfiend
+shadow demon
+shadow dragon
+shadow dragon lord
+shadow dragonkin
+shadow dragonknight
+shadow drake
+shadow drake king shapeshifter
+shadow falx
+shadow fiend
+shadow king
+shadow lord
+shadow mastiff
+shadow mastiff alpha
+shadow priest
+shadow prince
+shadow shaman and paladin
+shadow viper
+shadow wraith
+shadowfang
+shadowflame
+shadowspawn
+shadowspawn king
+shadowspire dragon
+shaman
+shaman druid
+shambling mound
+shapeshifter merfolk
+shark
+shark hunter
+sheep
+shield guardian
+shock elementalist
+shock serpent
+shoosuva
+shrieker
+shrimp
+sibriex
+silver dragon
+silver golem
+siren
+skeletal guard
+skeletal guard with sword
+skeletal mage
+skeletal warrior
+skeletal warrior skeleton
+skeleton
+skeleton archer
+skeleton guard
+skeleton guard with arrows
+skeleton guard with axe
+skeleton guard with bow
+skeleton guard with dagger
+skeleton guard with halberd
+skeleton guard with shield
+skeleton guard with sword
+skulk
+skull lord
+skunk
+sky beast
+skyweaver
+slaad tadpole
+slime creature
+slithering tracker
+small elephant
+small fox
+small sea giants
+small sea monster
+smoke monster
+snake
+snake-cannibal
+snow elemental
+snow monster
+snowman
+sorcerer
+sorcerer wizard
+soul eater
+sparrow
+spawn of kyuss
+spectator
+specter
+spectral balor shapeshifter
+spectral death drake
+spectral giant
+spectral giant mite
+spectral hell knight
+spectral iron dragon
+spectral kobold
+spectral leech
+spectral lich
+spectral merfolk
+spectral merfolk shaman
+spectral naga berserker
+spectral necromancer
+spectral ogre
+spectral ogre mage
+spectral ogrespawn
+spectral orc warlord
+spectral shadow demon
+spectral shadow dragon shapeshifter
+spectral shadow fiend
+spectral shadow king shapeshifter
+spectral spider
+spectral undead
+spectral warrior
+spectral wizard
+spectral wyrm
+spellshaper
+sphinx
+spider
+spider iguana
+spider manticore
+spider marmoset
+spider monkey
+spider queen
+spider zombie
+spiderling
+spined
+spiny frog
+spiny lobster
+spiny worm
+spiny worm zombie
+spirit guardian
+spirit naga
+spriggan
+spriggan captain
+spriggan druid
+spriggan knight
+sprite
+spy
+squid
+squirrel
+star spawn grue
+star spawn hulk
+star spawn larva mage
+star spawn mangler
+star spawn seer
+starfish
+starling
+steeder
+steel golem
+steel predator
+stegosaurus
+stirge
+stone cursed
+stone giant
+stone giant in the ocean
+stone golem
+stone juggernaut
+storm dragon
+storm dragon king
+storm dragon skeleton
+storm dragon zombie
+storm drake
+storm giant
+stormcaller
+stormspirit
+strahd zombie
+su-monster
+succubus
+sumatran gibbon
+summoner warlock
+svirfneblin
+swallow
+swamp creature
+swamp dragon
+swamp dragon zombie
+swamp drake
+swamp hound
+swamp killer
+swamp lizard
+swamp monster
+swamp mre oom
+swamp rat
+swamp snake
+swamp spider
+swamp urchin
+swamp water frog
+swamp witch
+swashbuckler
+swine
+sword wraith commander
+sword wraith warrior
+tabaxi hunter
+tabaxi minstrel
+tanarukk
+tarantula
+tardigrade
+tarrasque
+tasmanian devil shark
+taurid
+tawny owl
+tecuziztecatl
+tengu
+tengu monk
+tengu reaver
+tengu skeleton
+tengu warrior
+tentacle
+teracopterygid
+tessera
+thayan apprentice
+thayan warrior
+thorn slinger
+thorny
+thri-kreen
+thug
+thunder dragon
+thunder giants
+thunder god
+thunder monster
+thunderbolt dragon
+tiamat
+tidebringer
+tiger
+tiger shark
+tiny servant
+titan
+titan with death
+titivilus
+tlincalli
+topi
+tortle
+tortle druid
+transmuter
+trapdoor spider shapeshifter
+trapper
+treant
+tressym
+tri-flower frond
+tribal warrior
+triceratops
+tridrone
+troglodyte
+troglodyte champion of laogzed
+troll
+troll biker
+troll druid
+troll shaman tank
+troll-curse-hellion-razor-troll
+trout
+tuna
+turtle
+twilight drake
+twisted barkeeper
+tyrannosaurian
+tyrannosaurus rex
+ulitharid
+umber hulk
+undead
+undead dragon
+undead knight skeleton
+undead rogue
+undead sorceress
+undead spider
+undead troll
+undead wizard
+undead zombie
+under boss
+unicorn
+unseen horror
+ursus rufus
+uthgardt shaman
+valkyrie
+vampire
+vampire bat
+vampire batsman
+vampire king
+vampire knight
+vampire lord
+vampire prince
+vampire spawn
+vampire zombie
+vampiric bloodseeker
+vampiric lord
+vampiric mist
+vargouille
+vegepygmy
+vegepygmy chief
+velociraptor
+venous mantis
+vertebrae ramulus
+veteran
+vexor
+viking
+viper
+viper hunter
+viper queen
+viper with claw
+viviporidae
+voodoo priest
+voracious piranha
+vrock
+vulture
+walrus
+war gargoyle
+war hog
+war mage
+war priest
+war snail
+warbeast
+warg
+warhorse
+warhorse skeleton
+warlock
+warlock of the archfey
+warlock of the fiend
+warlock of the great old one
+warlock summoner
+warlord
+warlord of chaos
+warpriest
+warrior
+warrior king
+warriors
+wastrilith
+water elemental
+water elf
+water giant
+water golem
+water monster
+water nymph
+water rat
+water sponge
+water weird
+weasel
+werebear
+wereboar
+wererat
+wereraven
+weretiger
+werewolf
+whale hunter
+whale shark
+white abishai
+white bear
+white dragon
+white drake
+white golem
+white mage
+white mamba
+white maw
+white shark
+white wind
+white-fronted pig
+wicked bard
+wicked witch
+wight
+wight druid
+wild boar
+wild hog
+will-o'-wisp
+wind drake
+wind giant
+wind-cannibal
+wind-fiend
+winged dragon
+winged dragon king
+winged kobold
+winter wolf
+witch
+wizard
+wizard werewolf
+wizard-killer
+wizard-monk
+wolf
+wolf rider
+wolf spider
+wolf spider zombie
+wolfpack
+wolfskin soldier
+wolverine
+wood elf vampire king
+wood woad
+worg
+wraith
+wraith knight
+wren
+wretched dragon
+wretched sorrowsworn
+wyrd dragon
+wyrd serpent
+wyrmlord
+wyrmlord mummy
+wyvern
+wyvern rider
+xorn
+xvart
+xvart speaker
+xvart warlock of raxivort
+yak
+yakfolk priest
+yakfolk warrior
+yaktaur
+yaktaur captain
+yaktaur shapeshifter
+yaktaur skeleton
+yaktaur warrior
+yeenoghu
+yellow crane
+yellow draconian simulacrum
+yellow golem
+yellow jacket lizard
+yellow monkey with big teeth and an ugly face
+yellow musk creeper
+yellow musk zombie
+yellowfin tuna
+yellowtail
+yeth hound
+yeti
+yochlol
+young dragon
+yuan-ti abomination
+yuan-ti anathema
+yuan-ti broodguard
+yuan-ti malison
+yuan-ti mind whisperer
+yuan-ti nightmare speaker
+yuan-ti pit master
+yuan-ti pureblood
+yugoloth
+zartakodon
+zartakodon viviporidae
+zeta warrior
+zeus
+zombie
+zombie dragon
+zombie goblin
+zombie king
+zombie queen
+zombie shaman
+zombie spider
+zombie with death's grasp
+zombier
+zombier wyvern
+zombified
+zombot
+zorbo
+zuggtmoy
+zyqxuwy
