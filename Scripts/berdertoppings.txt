@@ -1,0 +1,21 @@
+catsup
+ketchup
+mustard
+brown mustard
+deli mustard
+dijon mustard
+stone ground mustard
+relish
+chutney
+bacon
+american cheese
+cheddar cheese
+swiss cheese
+provalone
+pepper jack
+mayo
+barbecue sauce
+diced onions
+raw onions
+grilled onions
+onion rings

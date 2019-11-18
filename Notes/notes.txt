@@ -1,0 +1,5 @@
+Git Notes:
+
+# don't prompt for credentials all the time
+git config credential.helper cache <timeout in seconds>
+

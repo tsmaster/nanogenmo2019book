@@ -15,6 +15,7 @@ from tags import *
 import makemobychapter
 import storydict
 import makefeastchapter
+import makepigchapter
 import makepoem
 from makepoem import Language, Word
 
@@ -108,12 +109,10 @@ def makeMissionChapter(storyDict):
     cityTitle = "A mission to visit " + placename
 
     chapterTitle = random.choice([fetchTitle, killTitle, cityTitle])
-    
-    return makechapter.Chapter(1, chapterTitle, text)
 
-def makePigChapter():
-    text = 'And then the Orange Baby Pig said "Yeah, but I\'m going to need you to do me a favor first. I want 100 of the best hamberders. And so he went and got some hamberders. And they were fine, I guess. And the Orange Baby Pig was happy. There must have been a lot of birds around, because you could hear so much happy tweeting.'
-    return makechapter.Chapter(45, "An Obstruction", text)
+    chapterText = makechapter.Chapter(1, chapterTitle, text)
+    return chapterText, monster, missionobj
+
 
 def renumber(chapterList):
     for i, c in enumerate(chapterList):
@@ -152,17 +151,14 @@ chapters = [
 
 while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     print ("making mission chapter {0}".format(len(chapters)))
-    chapters.append(makeMissionChapter(storyDict))
+    missionText, missionMonster, missionObj = makeMissionChapter(storyDict)
+    chapters.append(missionText)
     reportProgress(chapters)
-    # TODO fetch monster from recent mission
-    monster = makeMonsterName()
-    print ("making feast of {1} chapter {0}".format(len(chapters), monster))
-    chapters.append(makefeastchapter.makeFeastChapter(monster, storyDict))
+    print ("making feast of {1} chapter {0}".format(len(chapters), missionMonster))
+    chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
     reportProgress(chapters)
-    # TODO pull item from inventory
-    craftItem = makeMissionObject()
-    print ("making crafting chapter {0} about {1}".format(len(chapters), craftItem))
-    chapters.append(makemobychapter.makeMobyChapter(craftItem, 800, FAKE_GPT2))
+    print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
+    chapters.append(makemobychapter.makeMobyChapter(missionObj, 800, FAKE_GPT2))
     reportProgress(chapters)
     print ("making poem chapter {0}".format(len(chapters)))
     chapters.append(makepoem.makePoemChapter(storyDict))
@@ -173,7 +169,7 @@ if len(chapters) > 50:
 else:
     pigIndex = int(len(chapters) / 2)
     
-chapters.insert(pigIndex, makePigChapter())
+chapters.insert(pigIndex, makepigchapter.makePigChapter(storyDict))
 
 chapters.append(makeHappilyEverAfterChapter())
 
