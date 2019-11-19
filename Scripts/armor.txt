@@ -1,15 +1,212 @@
+additional short belt
+amber eye mask
+ancient mask
+another silver shield
+armor of earth
+armor of iron
+armor of stone
+belt
+belt of dwarven armor
+belt of elven ingenuity
+big red dragon scale
+black armor
+black steel armor
+black, silver, and bronze ring mail
 bracer
+briarheart armor
+bright blue dragonhide breastplate
+bronze chain mail
+bronze dragonplate armor
+bronze shield of clarity
+bronze shield of defense
+bronze shield of protection
+bronze shield of regeneration
+bronze shield of speed
+bronze shield of strength
+bronze shield of the sun
+bronze shield of the sunshine
+buckler
+caster armor
+celtic shield
+chainmail
+cloak
+cloth cape
+cloth-lined armor
 codpiece
 coif
+copper armor set
+copper shield of the sun
+crimson dragonskin cap
+crimson dragonskin robe
+crystal plate mail
+dark blue dragonhide cap
+dark blue dragonskin robe
+dark gray armor
+diamond armor
+dwarven armor
+dwarven armor set (with boots)
+dwarven plate armor
+dwarven ring mail armor of resistance
+frost dragon scale
 gauntlet
+giant steel helmet
+glowing red dragonhide belt
+glowing red dragonhide skirt
+gold and bronze armor
+gold and silver ring mail
+gold chain
+gold dragon skull armor
+gold dragon's scale
+gold dragonplate armor
+gold dragonplate armor set
+gold dragonplate armor sets
+gold plate
+gold studded ring mail
+golden dragon scale
+golden dragonhide cap
+golden dragonhide helmet
+golden dragonhide thigh armor
+golden scale mail
+gray and steel armor
+gray armor
+gray, black, and silver armor
 greave
+hat
+head cloak
+heater shield
+heavy chain mail
 helm
 helmet
-shield
-visor
-buckler
-heater shield
+huge gold dragon scale
+huge golden dragon scale
+imperial crown
+iron and steel ring mail
+iron dragonplate
+iron helmet
+iron plate armor
+iron plate arms
+iron ring mail
+iron shield
+iron shield of power
+iron shield of the sun
+iron-plated armor
+iron-plated chain mail
+iron-plated helm
 kite shield
-targe
+lacquered metal ring mail
+lacquered ring mail
 lantern shield
-
+large shield
+larger belt
+leather armor
+leather armor with fur covering
+leather armor with leather covering on it
+leather armor with painted fur covering
+leather belt
+leather belt with an animal rune on it
+leather belt with belt loops
+leather belt worn on the right shoulder
+leather cuirass
+leather jacket
+leather scale armor
+magician's hat
+massive golden dragon scale
+massive white dragon scale
+metal scale mail
+metal shield
+miter
+nice leather shield
+pair of boots
+pair of chain gauntlets
+pair of chain gloves
+pair of dark yellow dragonskin gloves
+pair of gauntlets
+pair of gloves
+pair of glowing blue dragonhide boots
+pair of glowing red dragonhide boots
+pair of gold dragonhide boots
+pair of golden boots
+pair of golden dragonfly boots
+pair of greaves
+pair of leather boots
+pair of leather boots which you can wear at home
+pair of leather bucklers
+pair of leather gloves
+pair of leather shoes
+pair of metal gauntlets
+pair of red leather boots
+pair of red leather gauntlets
+pair of ring mail gloves
+pair of sandals
+pair of silver boots
+pair of silver gloves
+pair of studded leather boots
+pair of studded leather shoes
+pair of white gloves
+pair of wood boots
+pair of wood gauntlets
+pair of yellow gloves
+pair of yellow leather boots
+pair of yellow leather gauntlets
+pauldrons
+purple dragonskin robe
+purple dragonskin skirt
+red dragonhide leather armor
+red dragonskin belt
+red leather armor
+red studded ring mail
+red trousers
+ring mail armor of dexterity
+ring mail armor of protection
+ring mail armor of protection of intelligence
+ring mail armor of regeneration
+ring mail armor of the protection of the king
+ring mail set
+robe
+robe of great beauty covered with golden scales
+scale mail
+shield
+shield belt
+shield of light
+shield of speed
+shimmering red dragonhide cape
+shimmering red dragonhide helmet
+short leather belt
+short, wide chainmail
+silk tunic of great beauty
+silver armor
+silver armor set
+silver dragonshield of the sun
+silver scale
+silver shield
+silver shield of clarity
+silver shield of the sun
+silver studded armor
+silver studded ring mail
+skull mask
+small belt
+small shield
+sorceress armor
+spiked helmet
+spiked shield
+steel plate
+steel plate armor
+steel shield of the sun
+steel-plated helm
+sun hat
+targe
+trousers for climbing
+two handed shield
+very thick wooden shield/leg
+visor
+war hat
+white cloak
+white leather hood
+white trousers
+wood-lined armor
+wood-plated armor
+wood-plated armor with cloth covering
+wood-plated chainmail
+wooden plate
+yellow dragonshield of the sun
+yellow leather armor

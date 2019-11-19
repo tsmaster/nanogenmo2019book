@@ -1,6 +1,7 @@
 aardvark
 aardwolf
-antelope
+allotherium
+anteater
 antelope
 baboon
 back bacon
@@ -12,6 +13,7 @@ bison
 bluebuck
 bontebok
 buffalo
+caribou
 cat
 chicken
 chimpanzee
@@ -23,7 +25,6 @@ cuttlefish
 deer
 dog
 dolphin
-dolphin
 dormouse
 dragon
 drake
@@ -31,6 +32,7 @@ dropbear
 duck
 duiker
 dwarf
+echidna
 eland
 elephant
 elf
@@ -46,16 +48,15 @@ gernsbok
 giraffe
 goat
 goblin
-goblin
 goose
 grysbok
 haggis
 ham
 hare
-hare
 hartebeest
 hedgehog
 hippopotamus
+hog
 horse
 hyena
 impala
@@ -64,6 +65,7 @@ jackalope
 kangaroo
 kelpie
 klipspringer
+koala bear
 kobold
 kraken
 kudu
@@ -111,7 +113,6 @@ quagga
 quail
 quince
 rabbit
-rabbit
 ram
 rat
 reedbuck
@@ -122,13 +123,12 @@ rock hare
 sahuagin
 salmon
 sausage
-sausage
-seal
 seal
 sengi
 shark
 shrew
 shrimp
+sloth
 springbok
 squid
 squirrel

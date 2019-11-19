@@ -1,51 +1,93 @@
+3-handed sword
 adze
+ahlspeiss
 ahlspiess
+ancient iron mace
 arbalest
 arquebus
+arrow
 atlatl
+atlatl claw
+atlatl sword
 awl pike
+axe
 axe club
+axe of the lord of the night
 backsword
 bandyclef
 bardiche
 bat wing carseque
 battle axe
 bec de corbin
+big axe
+big dragon spear
 bilbo
 bill
 bill hook
+black sword
+blackjack
+blade of the sky god
 blowgun
 blunderbuss
 bo
+boar spear
 board sword
 bohemian ear spoon
 bolo
 boomerang
+bow
+bow with a wooden bowstring
+bowling hammer
 brandistock
 brass knuckles
 broad axe
 broadsword
+broken wooden spoon for cooking
+bronze dagger
 bullwhip
+burning sword
 cannon
 carseque
 cestus
+chain axe
+chain sword
+chain whip
+chain whip of the sky
+chainsword of the sun lords
 chakram
 claymore
 club
+club of digging
+club of freezing cold
+club of throwing
+cold steel arrow
+cold steel dagger
+cold steel short bow
 composite bow
+concealed dagger
 corseque
 crop
 crossbow
+crossbow of the sun lord
 crow bill
+crystal dagger
 cutlass
 dadao
 dagger
+dagger-handle knife
 dane axe
 dao
+dark elven scimitar
 darts
 deer horn knife
 dha
+diamond dagger
+diamond mace
+diamond pickaxe
+diamond scimitar
+diamond staff
 dory
+earpick
 emeici
 english longbow
 epee
@@ -62,16 +104,34 @@ fire lance
 flail
 flamberge
 flame bladed sword
+flaming dagger
+flaming hammer
+flaming spear
+flaming sword
+flaming sword, with a cross over the hilt
 flatbow
 flyssa
 fu
 fukaro yori
 gastraphetes
+giant mace
+giant rock
+giant spear
 gladius
 glaive
 glaive guisarme
+goblin arrow
+golden falchion
+golden spike
 golok
+goodsword
+great axe
+great axe made of stone
+great club
+great hammer
+great mace
 great sword
+greatsword of destruction
 guisarme
 hafted axe
 halberd
@@ -80,36 +140,79 @@ hand axe
 hand cannon
 harpoon
 hatchet
+heavy bow
+hook
+horn staff
 horseman's pick
+huge crossbow
+huge golden crystal mace
+huge ruby war axe
+huge skull sword
 hungarian bow
 hunting sword
+ice katana
 ida
+iron axe
+iron dagger
+ivory axe
+jagged sword
 javelin
+jeweled sword
 jian
 jo
 kama
 kampilan
+katana
 katar
 khopesh
 klewang
+knife
+kobold's scimitar
 kris
 kukri
 kunai
 lance
+large bow
+large silver sword
 lasso
+light crossbow of the sun lord
+lobster spear
 lochaber axe
 long bearded axe
 long sword
+long sword axe
+long sword of the dead king
+long sword of the great night lords
+longbow
 longspear
+longsword
+longsword blade
+longsword of the sky gods
 lowland sword
 lucern hammer
+lucerne hammer
 macana
 mace
+mace of the fire spirit
+mace of the fire wizard
+mace of the forest master
+mace of the nightlords
+machete
+magic spear
+magical obsidian blade
 mallet
 man catcher
 mattock
+maul
+mauler
+mercenary spear
 messer
+military axe
+military axe 1st person
 military fork
+military hand axe
+military pickaxe
+mithril dagger
 monk's spade
 morning star
 myrmex
@@ -117,23 +220,34 @@ nagamaki
 naginata
 nimcha
 nunchaku
+obsidian dagger
+obsidian sword
+obsidian-tipped pike
+old iron spear
 ox tongue
 parade sword
 partisan
 pata
 pick axe
+piercing dagger
 pike
 pilum
 pitchfork
+platinum dagger
+poisoned dart
 pole axe
+poleaxe
 pulwar
+purple unicorn spear
 push dagger
 quarter staff
 ranseur
 rapier
+rapier of the morn lord
 rhomphaia
 rock
 rope dart
+rusty dagger
 saber
 sai
 scepter
@@ -141,35 +255,86 @@ scimitar
 scottish polearms
 scythe
 self bow
+sharpened wooden pick
 shashka
 shillelagh
+short sword
+shortbow
 shuriken
 sickle
 side sword
+silver arrow
+silver axe
+silver dagger
+silver mace
 sledge hammer
 sling
+sling for bows
+slingshot
+small rock
+small, crude crossbow
 sovnya
 spear
+speargun
+spearmace
 spetum
 sphairai
+spiked club
+spiked dagger of digging
+spiked katana
+spiked whip
+spoon
+staff
+staff of a bard
+staff of fire
+staff of the fire wizard
+staff of the forest master
+staff of the staff monk
+steel axe
+steel dagger
+stick
+stiletto
+stone plates
 stonebow
 svardstav
 swiss arrow
 swiss dagger
+sword
 sword mace
+sword of killing
+sword of slaying
+sword of the dread god of the midnight
+sword of the great night lord
+sword of the sun god
+sword with iron scabbards
 tekkan
 tekko
+the chieftan's daughter's prized dagger
+the hammer
 throwing knife
+throwing net
+throwing rod
 tiger claws
+tiger's paw
 tomahawk
 tonfa
 trident
 two handed sword
 viking axe
 viking halberd
+vorpal club
 voulge
+wand
+war axe
 war hammer
+war knife
+war pick
 war scythe
+warclub
+warden's staff
+whip
+wind blade
+wood sword
 wrench
 xiphos
 xyston

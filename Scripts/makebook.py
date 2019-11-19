@@ -87,7 +87,10 @@ def makeMissionParagraph(storyDict):
     monster = makeMonsterName()
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
-    text = "And then {5} went on a mission to fetch {0}. He went to {1} and killed a {2}. On the body, {5} found {3} and {4}.".format(missionObject, placename, monster, treasure1, treasure2, storydict.getHeroHeShePronoun(storyDict))
+
+    heShe = storydict.getHeroHeShePronoun(storyDict)
+    heSheCap = heShe.capitalize()
+    text = "And then {5} went on a mission to fetch {0}. {6} went to {1} and killed a {2}. On the body, {5} found a {3} and a {4}.".format(missionObject, placename, monster, treasure1, treasure2, heShe, heSheCap)
     return text, missionObject, monster, placename
 
 def makeMissionChapter(storyDict):
@@ -98,7 +101,7 @@ def makeMissionChapter(storyDict):
         text += partext
         text += "\n\n"
 
-    fetchTitle = "A mission to fetch a " + missionobj
+    fetchTitle = "A mission to fetch " + missionobj
     killTitle = "A mission to kill a " + monster
     cityTitle = "A mission to visit " + placename
 

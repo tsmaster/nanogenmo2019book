@@ -166,18 +166,18 @@ def makeMobyChapter(itemName, parLen=100, placeholder=False):
     
     parBreak = "\n\n"
     
-    output = makeParagraph("The first thing one must do when making a {0} is to".format(itemName), parLen)
+    output = makeParagraph("The first thing one must do when making {0} is to".format(itemName), parLen)
     output += parBreak
-    output += makeParagraph("The difficult part about finding the materials to make a {0} is".format(itemName), parLen)
+    output += makeParagraph("The difficult part about finding the materials to make {0} is".format(itemName), parLen)
     output += parBreak
-    output += makeParagraph("When crafing a {0}, pay attention to".format(itemName), parLen)
+    output += makeParagraph("When crafing {0}, pay attention to".format(itemName), parLen)
     output += makeParagraph("However, one can never", parLen)
     output += parBreak
-    output += makeParagraph("The final step when making a {0} is to".format(itemName), parLen)
+    output += makeParagraph("The final step when making {0} is to".format(itemName), parLen)
     output += parBreak
-    output += makeParagraph("To properly maintain a {0}, you should".format(itemName), parLen)
+    output += makeParagraph("To properly maintain {0}, you should".format(itemName), parLen)
     
-    return makechapter.Chapter(1, "The making of a " + itemName, output)
+    return makechapter.Chapter(1, "The making of " + itemName, output)
         
 
 if __name__ == "__main__":

@@ -1,4 +1,6 @@
 aarakocra
+aardvark
+aardwolf
 abishai
 abjurer
 aboleth
@@ -12,11 +14,12 @@ alhoon
 alkilith
 allip
 allosaurus
+allotherium
 almiraj
 ambush drake
 amnizu
-an ancient demon from the forest that fights with all his might
 ancient bear
+ancient demon from the forest that fights with all his might
 ancient efreet
 ancient elf
 ancient lich
@@ -55,7 +58,7 @@ astral dreadnought
 astrid merfolk
 astrid the merfolk
 atropal
-aurochs
+auroch
 avatar of death
 avialanid
 awakened shrub
@@ -181,6 +184,7 @@ cadaver collector
 cambion
 camel
 carapace shark
+caribou
 carrion crawler
 cat
 catfish
@@ -209,7 +213,7 @@ choker
 choldrith
 chuul
 chwinga
-clams
+clam
 clay golem
 cloaker
 cloud giant
@@ -349,7 +353,7 @@ draegloth
 draft horse
 dragon
 dragon fish
-dragon giants
+dragon giant
 dragon king
 dragon knight
 dragon monk
@@ -361,7 +365,7 @@ dragon turtle
 dragon vulture
 dragon warrior
 dragon zombie
-dragon's tears
+dragon's tear
 dragon-hunter
 dragon-lich
 dragon-seeker
@@ -556,6 +560,7 @@ gazer
 gelatinous cube
 gelid demonspawn
 genie
+geographus leucogaster kangaroo
 geonid
 ghast
 ghost
@@ -580,7 +585,7 @@ giant beetle
 giant boar
 giant centaur
 giant centipede
-giant cephalopods
+giant cephalopod
 giant chimpanzee
 giant clawed octopus
 giant cockroach
@@ -593,8 +598,8 @@ giant crocodile
 giant demon
 giant dragon
 giant eagle
-giant earth dragons
-giant earth dragons (sans the ground)
+giant earth dragon
+giant earth dragon (sans the ground)
 giant earth mite
 giant earth wyrm
 giant earthworm
@@ -602,7 +607,7 @@ giant elephant
 giant elk
 giant eyeball
 giant fire beetle
-giant fire dragons
+giant fire dragon
 giant fire giant
 giant fire giant (sans the fire)
 giant fire wyrm
@@ -705,7 +710,6 @@ gnoll witherling
 gnome
 gnome artificer
 gnome monk
-gnomes
 goat
 goblin
 goblin bard
@@ -801,8 +805,6 @@ hill giant
 hill giant zombie
 hippogriff
 hippopotamus
-hippopotamus and hyena
-hiragana katanas
 hobgoblin
 hobgoblin captain
 hobgoblin devastator
@@ -846,9 +848,10 @@ hydra
 hydra zombie
 hyena
 hyla panda
-hylaeosaurs
+hylaeosaur
+hylaeosaurus
 hylicosaurus
-hylomorphs
+hylomorph
 hyloxodon
 hyrax
 ice bard
@@ -870,7 +873,7 @@ ice spirit
 ice statue
 ice toad
 ice wizard
-ice wolves
+ice wolf
 ice-eared goblin
 ichthyosaur
 icy scorpion
@@ -899,14 +902,11 @@ jaguar cub of the sea
 jaguar mimic
 japanese star
 japanese warrior
-japanese warriors and vikings
 jellyfish
 juiblex
 kalka-kylla
 kamadan
 kangaroo
-kangaroo geographus leucogaster
-kangaroos and giant anteaters
 kelpie
 kenku
 ki-rin
@@ -933,6 +933,7 @@ king shark of tasmania
 king squid
 kite with wings
 knight
+koala bear
 kobold
 kobold demon lord
 kobold demonologist
@@ -993,7 +994,6 @@ lizard king
 lizard queen
 lizardfolk
 lizardfolk shaman
-lizards and turtles
 lobster
 lobster on fire
 lobsterfolk
@@ -1008,7 +1008,7 @@ magmin
 magus of knowledge
 mahi mahi
 malformed kraken
-mammals
+mammal
 mammoth
 man in black
 man in blue
@@ -1206,6 +1206,7 @@ ostrich
 otyugh
 owl
 owlbear
+ox
 paladin
 paladin magus of the fire
 paladin of death
@@ -1219,8 +1220,8 @@ paladin of the peace-bringing sun
 paladin of the rain
 paladin of the storm
 paladin of wisdom
+pancake fighter
 pancake warrior
-pancakes fighter & vikings
 panda
 panther
 pegasus
@@ -1270,6 +1271,7 @@ quasit
 queen of the forest
 queen of thunder
 queen penguin
+quetzalcoatl
 quetzalcoatlus
 quickling
 quipper
@@ -1338,7 +1340,7 @@ redcap
 reef shark
 remorhaz
 reptile
-reptiles of birds
+reptile of birds
 retriever
 revenant
 rhino
@@ -1359,7 +1361,8 @@ sahuagin
 sahuagin baron
 sahuagin priestess
 sailor of hell
-saints and warriors
+saint
+saint warrior
 salamander
 salmon
 sand eel
@@ -1392,7 +1395,6 @@ sea snake shapeshifter
 sea spawn
 sea sponge
 sea urchin
-sea urchins
 sea-captain
 sea-captain skirmish captain
 sea-lord cavalry commander
@@ -1419,9 +1421,10 @@ shadow king
 shadow lord
 shadow mastiff
 shadow mastiff alpha
+shadow paladin shaman
 shadow priest
 shadow prince
-shadow shaman and paladin
+shadow shaman paladin
 shadow viper
 shadow wraith
 shadowfang
@@ -1440,6 +1443,7 @@ shield guardian
 shock elementalist
 shock serpent
 shoosuva
+shrew
 shrieker
 shrimp
 sibriex
@@ -1469,9 +1473,10 @@ skyweaver
 slaad tadpole
 slime creature
 slithering tracker
+sloth
 small elephant
 small fox
-small sea giants
+small sea giant
 small sea monster
 smoke monster
 snake
@@ -1613,7 +1618,7 @@ thorny
 thri-kreen
 thug
 thunder dragon
-thunder giants
+thunder giant
 thunder god
 thunder monster
 thunderbolt dragon
@@ -1719,7 +1724,7 @@ warlord of chaos
 warpriest
 warrior
 warrior king
-warriors
+warrior saint
 wastrilith
 water elemental
 water elf

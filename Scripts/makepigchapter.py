@@ -9,7 +9,7 @@ import makechapter
 def makePigChapter(storyDict):
     hamberder_count = random.randrange(50,150)
     
-    text = 'And then the Orange Baby Pig said "Yeah, but I\'m going to need you to do me a favor first. I want {1} of the best hamberders. I want so many hamberders that you\'re going to get tired of hamberders. And so {0} went and got some hamberders.\n\n'.format(storyDict[HERO_TAG][FIRSTNAME_TAG], hamberder_count)
+    text = 'And then the Orange Baby Pig said "Yeah, but I\'m going to need you to do me a favor first. I want {1} of the best hamberders. I want so many hamberders that you\'re going to get tired of hamberders." And so {0} went and got some hamberders.\n\n'.format(storyDict[HERO_TAG][FIRSTNAME_TAG], hamberder_count)
 
     rules = {
         'burgerdesc' : [
