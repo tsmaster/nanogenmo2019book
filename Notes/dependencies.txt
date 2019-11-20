@@ -1,0 +1,33 @@
+=== python ===
+datetime
+os
+random
+string
+sys
+time
+
+=== external ===
+jsonpickle
+nltk
+pincelate
+pronouncing
+pycorpora
+textblob
+tracery
+transformers
+
+=== mine ===
+colors
+makechapter
+makefeastchapter
+makemobychapter
+makeperson
+makepigchapter
+makeplacename
+makepoem
+rhymelang
+storydict
+tags
+util
+words
+wordwrap
