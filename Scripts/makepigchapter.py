@@ -64,8 +64,15 @@ def makePigChapter(storyDict):
     print("berder target:", hamberder_count)
     print("alg total:", sum(counts))
 
+    descs = []
+    
     for c in counts:
-        berder_line = "{0} {1}\n".format(c, grammar.flatten('#burgerdesc#'))
+        while True:
+            desc = grammar.flatten('#burgerdesc#')
+            if not desc in descs:
+                descs.append(desc)
+                break
+        berder_line = "{0} {1}\n".format(c, desc)
         text += berder_line
     text += '\n'
 

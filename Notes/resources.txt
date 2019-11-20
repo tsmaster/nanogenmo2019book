@@ -27,5 +27,11 @@ Sources for various pieces:
 ---
 food lists come from hand-scraping wikipedia
 monsters are a combination of Dungeons and Dragons Open Gaming License SRD monster list, and my own Shapeshifting RPG monster list.
+treasures, races largely come from Shapeshifting RPG
 corpora comes from Darius Kazemi
-pycorpora, pincelate, pronouncing comes from Allison Parrish
+
+
+Python Libraries:
+---
+PyTorch-Transformers
+pycorpora, pincelate, pronouncing come from Allison Parrish

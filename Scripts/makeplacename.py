@@ -39,7 +39,8 @@ def getCachedCities():
 def makePlaceName():
     cities = getCachedCities()
     baseName = random.choice(cities)
-    return util.mutateWord(baseName).capitalize()
+    mutated = util.mutateWord(baseName).capitalize()
+    return mutated.title() 
 
 if __name__ == '__main__':
     for i in range(20):

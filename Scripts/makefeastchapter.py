@@ -423,10 +423,17 @@ def makeFeastChapter(monster, storyDict):
 
     num_courses = random.randrange(5, 15)
 
+    courseWords = []
+    
     for courseIndex in range(num_courses):
         courseDisplayNum = courseIndex + 1
         courseOrdinalWord = makeOrdinal(courseDisplayNum)
-        course = makeRandomCourse()
+        while True:
+            course = makeRandomCourse()
+            if ((courseIndex == 0) or
+                (course.shortDesc != courseWords[-1])):
+                courseWords.append(course.shortDesc)
+                break
         
         output += "The {0} course was {1}. It consisted of {2}.\n\n".format(
             courseOrdinalWord,

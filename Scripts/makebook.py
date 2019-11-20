@@ -6,6 +6,9 @@ import string
 import time
 import datetime
 
+import tracery
+from tracery.modifiers import base_english
+
 import makechapter
 import colors
 import makeperson
@@ -23,7 +26,7 @@ import makeplacename
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 12000
+TARGET_WORD_COUNT = 20000
 
 FAKE_GPT2 = False
 
@@ -41,7 +44,7 @@ def makeMissionObject():
     article = "a"
     if isVowel(adjective[0]):
         article = "an"
-    return ' '.join([article, adjective, noun])
+    return ' '.join([article, adjective, noun]).lower()
 
 def makeHonorific(gender):
     table = {GENDER_MALE_TAG: 'sir',
@@ -50,13 +53,101 @@ def makeHonorific(gender):
              GENDER_OTHER_TAG: "respected one"}
     return table[gender]
 
+def makeMentorDescription():
+    oldWords = [
+        'old',
+        'ancient',
+        'decrepit',
+        'elderly',
+        'gray',
+        'tired',
+        'along in years']
+    wiseWords = [
+        'wise',
+        'well-versed',
+        'venerable',
+        'educated',
+        'knowledgable',
+        'perceptive',
+        'sensible',
+        'shrewd',
+        'smart',
+        'contemplative',
+        'sage',
+        'keen',
+        'sharp']
+    return random.choice(oldWords) + ' and ' + random.choice(wiseWords)
+
+def makeHeroDescription():
+    youngWords = [
+        'young',
+        'youthful',
+        'inexerienced',
+        'fledgling',
+        'green',
+        'growing',
+        'little',
+        'juvenile',
+        'raw',
+        'childish',
+        'childlike',
+        'callow',
+        ]
+    brashWords = [
+        'bold',
+        'brash',
+        'impetuous',
+        'headstrong',
+        'adventurous',
+        'curious',
+        'imaginitive',
+        'ignorant',
+        'unseasoned',
+        ]
+    return random.choice(youngWords) + ' and ' + random.choice(brashWords)
+
+
+def makeTownDescription():
+    smallWords = [
+        'small',
+        'wee',
+        'tiny',
+        'cramped',
+        'meager',
+        'modest',
+        'narrow',
+        'paltry',
+        'poor',
+        'small-scale',
+        'slight',
+        'diminutive',
+        'little',
+        'trifling',
+        ]
+    quaintWords = [
+        'curious',
+        'quaint',
+        'fanciful',
+        'peculiar',
+        'unusual',
+        'whimsical',
+        'weird',
+        'eccentric',
+        'fantastic',
+        'idiosyncratic',
+        'off the beaten track',
+    ]
+
+    return random.choice(smallWords) + ' and ' + random.choice(quaintWords)
+
+
 def makeMonsterName():
     return random.choice(monsterList)
 
 def makeTreasure():
     treasureName = random.choice(treasureList)
     treasureAdj = random.choice(missionObjectsAdjectivesList)
-    return ' '.join([treasureAdj, treasureName])
+    return ' '.join([treasureAdj, treasureName]).lower()
 
 def makeCallToActionChapter(storyDict):
     hero = storyDict[HERO_TAG]
@@ -65,7 +156,7 @@ def makeCallToActionChapter(storyDict):
     heroGender = hero[GENDER_TAG]
     heroRace = hero[RACE_TAG]
     
-    text = "{0} was a {5} {6} that lived in {1}. {1} was a nice town. Nondescript, for now. {2} had a mentor, named {3}. Also nondescript. {4} tells {2} 'I call you to adventure!'. But {2} says 'No {7}! I refuse the call to adventure. I want to stay here in {1} and smoke pipes at Tosci's Power Converters and Pipe shop'.".format(
+    text = "{0} was a {5} {6} that lived in {1}. {2} was {9}. {1} was a nice town. {1} was {10}. {2} had a mentor, named {3}. {4} was {8}. {4} told {2} 'I call you to adventure!'. But {2} said 'No {7}! I refuse the call to adventure. I want to stay here in {1} and smoke pipes at Tosci's Power Converters and Pipe shop'.".format(
         hero[FULLNAME_TAG],
         hero[HOMETOWN_TAG],
         hero[FIRSTNAME_TAG],
@@ -73,7 +164,10 @@ def makeCallToActionChapter(storyDict):
         mentor[FIRSTNAME_TAG],
         heroGender,
         heroRace,
-        makeHonorific(mentor[GENDER_TAG])
+        makeHonorific(mentor[GENDER_TAG]),
+        makeMentorDescription(),
+        makeHeroDescription(),
+        makeTownDescription()
     )
     return makechapter.Chapter(1, hero[FULLNAME_TAG], text)
 

@@ -1,7 +1,10 @@
 import random
+import os
 
 def getList(filename):
-    with open(filename) as f:
+    corporaDir = "../Corpora"
+    extFilename = os.path.join(corporaDir, filename)
+    with open(extFilename) as f:
         lines = f.readlines()
         lines = [w.strip() for w in lines]
         lines = [w for w in lines if w]
