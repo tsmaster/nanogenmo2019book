@@ -351,12 +351,7 @@ def makeDessertCourse():
             'candied ginger',
             'candied yams',
             ],
-        'puddings': [
-            'banana pudding',
-            'chocolate pudding',
-            'vanilla pudding',
-            'butterscotch pudding',
-            ],
+        'puddings': util.getList("puddings.txt"),
         'deepfried': [
             'churros',
             'doughnuts',
@@ -379,10 +374,7 @@ def makeDessertCourse():
             'jello shots',
             'trifle',
             ],
-        'pastries': [
-            'croissant',
-            'shortbread',
-            ],
+        'pastries': util.getList("pastries.txt"),
         'sweetsoups': [
             'chocolate soup',
             'strawberry soup',
@@ -394,7 +386,11 @@ def makeDessertCourse():
             'port',
             'muscat',
             'sherry',
+            'bristol cream',
+            'passum wine',
             'madeira',
+            'raisin wine',
+            'ice wine',
             'sauternes'],
     }
         

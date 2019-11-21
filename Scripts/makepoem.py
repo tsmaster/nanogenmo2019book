@@ -133,6 +133,9 @@ def makeLine(lang, sylCount, rhymeLine):
 class WordTooLongForLineException(Exception):
     pass
 
+class InsufficientRhymeException(Exception):
+    pass
+
 def makeLineEndsWithWord(lang, sylCount, word):
     words = [word]
     if word.syllable_count > sylCount:
@@ -229,6 +232,15 @@ def genBindings(rhymeSections, rhymeCountsDict):
                 break
         yield outDict
 
+def isSubstringOfAny(rhymeWord, usedWords):
+    rws = str(rhymeWord)
+    for w in usedWords:
+        ws = str(w)
+        if ((ws in rws) or
+            (rws in ws)):
+            return True
+    return False
+
 def genPoemsFromPattern(lang, pattern):
     rhymeCountsDict = {}
     for syl, rhymeKey in pattern:
@@ -247,10 +259,17 @@ def genPoemsFromPattern(lang, pattern):
             for lineNum, pat in enumerate(pattern):
                 sylCount, rhymeChar = pat
                 rhymeSect = b[rhymeChar]
-                while True:
+
+                foundRhyme = False
+                candWords = lang.words[rhymeSect][:]
+                random.shuffle(candWords)
+                for rhymeWord in candWords:
                     rhymeWord = random.choice(lang.words[rhymeSect])
-                    if not (rhymeWord in lastWords):
+                    if (not (isSubstringOfAny(rhymeWord,lastWords))):
+                        foundRhyme = True
                         break
+                if not foundRhyme:
+                    raise InsufficientRhymeException()
                 lastWords[lineNum] = rhymeWord
                 lineAsWordList = makeLineEndsWithWord(lang, sylCount, rhymeWord)
                 lines[lineNum] = ' '.join([str(w) for w in lineAsWordList])
@@ -258,6 +277,8 @@ def genPoemsFromPattern(lang, pattern):
             yield (poem + '\n\n')
         except WordTooLongForLineException:
             print("too long, trying again")
+        except InsufficientRhymeException:
+            print("bad rhyme, trying again")
 
 def genLimericks(lang):
     rhymeKeys = list(findRhymeKeys(lang, 3))

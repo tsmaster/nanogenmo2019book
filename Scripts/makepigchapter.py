@@ -26,7 +26,7 @@ def makePigChapter(storyDict):
             '#topping#',
             '#topping# and #topping#',
             '#topping#, #topping#, and #topping#',
-            '#topping#, and #topping#, but no #topping#'
+            '#topping# and #topping#, but no #topping#'
             ],
         'topping': util.getList("berdertoppings.txt"),
         }

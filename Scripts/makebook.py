@@ -26,9 +26,9 @@ import makeplacename
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 20000
+TARGET_WORD_COUNT = 3000
 
-FAKE_GPT2 = False
+FAKE_GPT2 = True
 
 missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
 missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
@@ -156,7 +156,7 @@ def makeCallToActionChapter(storyDict):
     heroGender = hero[GENDER_TAG]
     heroRace = hero[RACE_TAG]
     
-    text = "{0} was a {5} {6} that lived in {1}. {2} was {9}. {1} was a nice town. {1} was {10}. {2} had a mentor, named {3}. {4} was {8}. {4} told {2} 'I call you to adventure!'. But {2} said 'No {7}! I refuse the call to adventure. I want to stay here in {1} and smoke pipes at Tosci's Power Converters and Pipe shop'.".format(
+    text = "{0} was a {5} {6} that lived in {1}. {2} was {9}. {1} was a nice town. {1} was {10}. {2} had a mentor, named {3}. {4} was {8}.\n\n{4} told {2} 'I call you to adventure!'.\n\nBut {2} said 'No, {7}! I refuse the call to adventure. I want to stay here in {1} and smoke pipes at Tosci's Power Converters and Pipe shop'.".format(
         hero[FULLNAME_TAG],
         hero[HOMETOWN_TAG],
         hero[FIRSTNAME_TAG],
