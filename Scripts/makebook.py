@@ -149,6 +149,32 @@ def makeTreasure():
     treasureAdj = random.choice(missionObjectsAdjectivesList)
     return ' '.join([treasureAdj, treasureName]).lower()
 
+def makeReasonToRefuse(storyDict):
+    actions = [
+        "smoke pipes",
+        "shoot billiards",
+        "sing songs",
+        "buy power converters",
+        "catch pocket monsters",
+        "read stories",
+        "bulls-eye womp rats",
+        ]
+
+    locations = [
+        "at Tosci's Power Converters and Pipe Shop",
+        "at Taasche Station",
+        "in Beggar's Canyon",
+        "in The Shire",
+        "in the City Square",
+        "behind the temple",
+        "under the bridge",
+        ]
+    text = "I want to stay here in {0} and {1} {2}".format(
+        storyDict[HERO_TAG][HOMETOWN_TAG],
+        random.choice(actions),
+        random.choice(locations))
+    return text
+
 def makeCallToActionChapter(storyDict):
     hero = storyDict[HERO_TAG]
     mentor = storyDict[MENTOR_TAG]
@@ -156,7 +182,7 @@ def makeCallToActionChapter(storyDict):
     heroGender = hero[GENDER_TAG]
     heroRace = hero[RACE_TAG]
     
-    text = "{0} was a {5} {6} that lived in {1}. {2} was {9}. {1} was a nice town. {1} was {10}. {2} had a mentor, named {3}. {4} was {8}.\n\n{4} told {2} 'I call you to adventure!'.\n\nBut {2} said 'No, {7}! I refuse the call to adventure. I want to stay here in {1} and smoke pipes at Tosci's Power Converters and Pipe shop'.".format(
+    text = "{0} was a {5} {6} that lived in {1}. {2} was {9}. {1} was a nice town. {1} was {10}. {2} had a mentor, named {3}. {4} was {8}.\n\n{4} told {2} 'I call you to adventure!'.\n\nBut {2} said 'No, {7}! I refuse the call to adventure. {11}'.".format(
         hero[FULLNAME_TAG],
         hero[HOMETOWN_TAG],
         hero[FIRSTNAME_TAG],
@@ -167,7 +193,8 @@ def makeCallToActionChapter(storyDict):
         makeHonorific(mentor[GENDER_TAG]),
         makeMentorDescription(),
         makeHeroDescription(),
-        makeTownDescription()
+        makeTownDescription(),
+        makeReasonToRefuse(storyDict)
     )
     return makechapter.Chapter(1, hero[FULLNAME_TAG], text)
 
