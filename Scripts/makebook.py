@@ -26,9 +26,9 @@ import makeplacename
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 3000
+TARGET_WORD_COUNT = 30000
 
-FAKE_GPT2 = True
+FAKE_GPT2 = False
 
 missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
 missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
