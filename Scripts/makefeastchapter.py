@@ -342,15 +342,7 @@ def makeDessertCourse():
             'pecan pie',
             'pi day pie',
             ],
-        'candies': [
-            'chocolate truffles',
-            'chocolate coated strawberries',
-            'caramels',
-            'nonpareils',
-            'taffy',
-            'candied ginger',
-            'candied yams',
-            ],
+        'candies': util.getList("candies.txt"),
         'puddings': util.getList("puddings.txt"),
         'deepfried': [
             'churros',
