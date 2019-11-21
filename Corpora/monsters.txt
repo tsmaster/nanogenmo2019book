@@ -113,6 +113,7 @@ berserker
 big blue snake
 big ole' lance
 big red dragon
+billy nitro
 bird
 bird of prey
 bird with yellow beak
@@ -548,6 +549,7 @@ frost mage
 frost worm
 frostbite spider
 frostwolf queen
+frugo
 full color render
 fungus
 galeb duhr
@@ -1138,6 +1140,7 @@ nightbane
 nightmare
 nightwalker
 nilbog
+ninja with no legs
 noble
 noctilucent ogre monster
 noctilucent slime creature zombie
@@ -1670,6 +1673,7 @@ undead wizard
 undead zombie
 under boss
 unicorn
+unknown traveller
 unseen horror
 ursus rufus
 uthgardt shaman
@@ -1695,6 +1699,7 @@ vertebrae ramulus
 veteran
 vexor
 viking
+villain on pony
 viper
 viper hunter
 viper queen

@@ -69,6 +69,7 @@ emerald ring of fire
 fire crystal dragon's claw
 fire-moulded (raindrop) ring
 fireweed
+flag
 frozen crystal
 frozen gem
 frozen pearl
@@ -126,6 +127,7 @@ iron finger necklace
 iron ingot
 iron ore from a furnace
 iron ring
+justice barrel
 kangaroo head
 kraken's teeth
 large dragon's tail
@@ -140,6 +142,7 @@ lava stone
 leaf
 loot of gold
 magnetic heart necklace
+metal arm holding a sword
 metal ring of earth
 metal ring of fire
 metal ring of ice
@@ -164,6 +167,7 @@ red ring
 redstone torch
 ring of the sun god
 rock ring
+rowboat
 ruby
 ruby blood dragon's claw
 ruby ring
@@ -203,6 +207,9 @@ treasure chest
 tribunal orb
 troll skull necklace
 wad of coins
+wand of heat ray
+wand of iceballs
+wand of killer bees
 water (raindrop) ring
 water stone
 white card
