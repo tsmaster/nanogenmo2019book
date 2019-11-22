@@ -264,6 +264,16 @@ def reportProgress(chapters):
     print("elapsed seconds: {0}".format(elapsedSeconds))
     print("words per second: {0:.2f}".format(cw / elapsedSeconds))
 
+def makeTitlePage(storyDict):
+    s = """
+SHAPESHIFTING:
+{0} and the Generation of Adventure
+
+
+""".format(storyDict[HERO_TAG][FULLNAME_TAG])
+    return s
+           
+
 chapters = [
     makeCallToActionChapter(storyDict)]
 
@@ -295,7 +305,7 @@ reportProgress(chapters)
 
 renumber(chapters)
 
-s = formBook(chapters)
+s = makeTitlePage(storyDict) + '\n' + formBook(chapters)
 
 timeLabel = datetime.datetime.now().strftime("draft_%Y_%m_%d_%H_%M")
 draftFilename = "../DraftBooks/{0}_{1}.txt".format(timeLabel, TARGET_WORD_COUNT)
