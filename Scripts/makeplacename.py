@@ -31,9 +31,8 @@ def getCachedCities():
     fileList = pycorpora.get_file("geography", "norwegian_cities")
     for e in fileList["cities"]:
         cachedCities.append(e["city"])
-    
-    return cachedCities
-    
+
+    return [x for x in util.dedup(cachedCities) if x]
 
 
 def makePlaceName():

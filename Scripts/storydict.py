@@ -19,3 +19,8 @@ def makeStoryDict():
 def getHeroHeShePronoun(storyDict):
     hero = storyDict[HERO_TAG]
     return hero[HE_SHE_PRONOUN_TAG]
+
+def getHeroHimHerPronoun(storyDict):
+    hero = storyDict[HERO_TAG]
+    return hero[HIM_HER_PRONOUN_TAG]
+

@@ -26,9 +26,20 @@ for fn in filenames:
                 print ("Imported:", imported)
                 importedSet.add(imported)
 
-print importedSet
+print (importedSet)
 
-python_std = ["random", "time", "glob", "__future__", "argparse", "datetime", "os", "string", "sys"]
+python_std = [
+    "__future__",
+    "argparse",
+    "datetime",
+    "glob",
+    "logging",
+    "os",
+    "random",
+    "string",
+    "sys",
+    "time",
+]
 
 external = []
 

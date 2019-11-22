@@ -23,18 +23,22 @@ def makePronouns(pd):
     if (d100 < 45):
         pd[HE_SHE_PRONOUN_TAG] = "he"
         pd[HIS_HER_PRONOUN_TAG] = "his"
+        pd[HIM_HER_PRONOUN_TAG] = "him"
         pd[GENDER_TAG] = GENDER_MALE_TAG
     elif (d100 < 90):
         pd[HE_SHE_PRONOUN_TAG] = "she"
         pd[HIS_HER_PRONOUN_TAG] = "her"
+        pd[HIM_HER_PRONOUN_TAG] = "her"
         pd[GENDER_TAG] = GENDER_FEMALE_TAG
     elif (d100 < 98):
         pd[HE_SHE_PRONOUN_TAG] = "they"
         pd[HIS_HER_PRONOUN_TAG] = "their"
+        pd[HIM_HER_PRONOUN_TAG] = "them"
         pd[GENDER_TAG] = GENDER_NEUTER_TAG
     else:
         pd[HE_SHE_PRONOUN_TAG] = "xe"
         pd[HIS_HER_PRONOUN_TAG] = "xis"
+        pd[HIM_HER_PRONOUN_TAG] = "xem"        
         pd[GENDER_TAG] = GENDER_OTHER_TAG
         
 

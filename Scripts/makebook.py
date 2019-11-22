@@ -22,29 +22,16 @@ import makepigchapter
 import makepoem
 from makepoem import Language, Word
 import makeplacename
+import makejourney
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 30000
+TARGET_WORD_COUNT = 50000
 
 FAKE_GPT2 = False
 
-missionObjectsList = dedup(getList("weapons.txt") + getList("armor.txt"))
-missionObjectsAdjectivesList = dedup(getList("adjectives.txt") + colors.getColors())
-monsterList = getList("monsters.txt")
-treasureList = getList("treasure.txt")
 
-def isVowel(c):
-    return c in "aeiou"
-
-def makeMissionObject():
-    noun = random.choice(missionObjectsList)
-    adjective = random.choice(missionObjectsAdjectivesList)
-    article = "a"
-    if isVowel(adjective[0]):
-        article = "an"
-    return ' '.join([article, adjective, noun]).lower()
 
 def makeHonorific(gender):
     table = {GENDER_MALE_TAG: 'sir',
@@ -141,14 +128,6 @@ def makeTownDescription():
     return random.choice(smallWords) + ' and ' + random.choice(quaintWords)
 
 
-def makeMonsterName():
-    return random.choice(monsterList)
-
-def makeTreasure():
-    treasureName = random.choice(treasureList)
-    treasureAdj = random.choice(missionObjectsAdjectivesList)
-    return ' '.join([treasureAdj, treasureName]).lower()
-
 def makeReasonToRefuse(storyDict):
     actions = [
         "smoke pipes",
@@ -202,35 +181,6 @@ def makeHappilyEverAfterChapter():
     text = "And they all lived happily ever after. That is the end of the story, until we tell another tale."
     return makechapter.Chapter(7, "Resolutions", text)
 
-def makeMissionParagraph(storyDict):
-    missionObject = makeMissionObject()
-    placename = makeplacename.makePlaceName()
-    monster = makeMonsterName()
-    treasure1 = makeTreasure()
-    treasure2 = makeTreasure()
-
-    heShe = storydict.getHeroHeShePronoun(storyDict)
-    heSheCap = heShe.capitalize()
-    text = "And then {5} went on a mission to fetch {0}. {6} went to {1} and killed a {2}. On the body, {5} found a {3} and a {4}.".format(missionObject, placename, monster, treasure1, treasure2, heShe, heSheCap)
-    return text, missionObject, monster, placename
-
-def makeMissionChapter(storyDict):
-    numParas = random.randrange(10, 20)
-    text = ""
-    for i in range(numParas):
-        partext, missionobj, monster, placename = makeMissionParagraph(storyDict)
-        text += partext
-        text += "\n\n"
-
-    fetchTitle = "A mission to fetch " + missionobj
-    killTitle = "A mission to kill a " + monster
-    cityTitle = "A mission to visit " + placename
-
-    chapterTitle = random.choice([fetchTitle, killTitle, cityTitle])
-
-    chapterText = makechapter.Chapter(1, chapterTitle, text)
-    return chapterText, monster, missionobj
-
 
 def renumber(chapterList):
     for i, c in enumerate(chapterList):
@@ -279,18 +229,23 @@ chapters = [
 
 while calculateWordCount(chapters) < TARGET_WORD_COUNT:
     print ("making mission chapter {0}".format(len(chapters)))
-    missionText, missionMonster, missionObj = makeMissionChapter(storyDict)
+    missionText, missionMonster, missionObj = makejourney.makeJourneyChapter(storyDict)
     chapters.append(missionText)
     reportProgress(chapters)
-    print ("making feast of {1} chapter {0}".format(len(chapters), missionMonster))
-    chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
-    reportProgress(chapters)
-    print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
-    chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
-    reportProgress(chapters)
-    print ("making poem chapter {0}".format(len(chapters)))
-    chapters.append(makepoem.makePoemChapter(storyDict))
-    reportProgress(chapters)
+
+    dieRoll = random.randrange(10)
+    if ((dieRoll < 4) and (not (missionMonster is None))):
+        print ("making feast of {1} chapter {0}".format(len(chapters), missionMonster))
+        chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
+        reportProgress(chapters)
+    elif ((dieRoll < 8) and (not (missionObj is None))):
+        print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
+        chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
+        reportProgress(chapters)
+    else:
+        print ("making poem chapter {0}".format(len(chapters)))
+        chapters.append(makepoem.makePoemChapter(storyDict))
+        reportProgress(chapters)
 
 if len(chapters) > 50:
     pigIndex = 44

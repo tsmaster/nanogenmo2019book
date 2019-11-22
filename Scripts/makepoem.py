@@ -455,7 +455,7 @@ def makePoemChapter(storyDict):
     bodyFact = random.choice(makeBodies)
     
     output += bodyFact(lang)
-    title = "a {0} poem".format(monster)
+    title = "a {0} poem".format(monster).title()
     return makechapter.Chapter(1, title, output)
 
 if __name__ == "__main__":

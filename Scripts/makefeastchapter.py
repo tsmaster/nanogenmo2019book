@@ -443,7 +443,9 @@ def makeFeastChapter(monster, storyDict):
     output += "The final course was dessert. It consisted of {0}.".format(
         dessertCourse.longDesc)
 
-    return makechapter.Chapter(1, "The feast of the "+monster, output)
+    title = "The feast of the "+monster
+    title = title.title()
+    return makechapter.Chapter(1, title, output)
         
         
 if __name__ == "__main__":

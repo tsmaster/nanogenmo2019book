@@ -1,5 +1,4 @@
 jsonpickle
-logging
 nltk
 numpy
 pincelate

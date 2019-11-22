@@ -176,8 +176,9 @@ def makeMobyChapter(itemName, parLen=100, placeholder=False):
     output += makeParagraph("The final step when making {0} is to".format(itemName), parLen)
     output += parBreak
     output += makeParagraph("To properly maintain {0}, you should".format(itemName), parLen)
-    
-    return makechapter.Chapter(1, "The making of " + itemName, output)
+
+    title = "The making of " + itemName
+    return makechapter.Chapter(1, title.title(), output)
         
 
 if __name__ == "__main__":
