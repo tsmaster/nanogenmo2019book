@@ -12,6 +12,9 @@ import makemonster
 
 pin = None
 
+hasMadeLimerick = False
+limerickPercent = 75
+
 class Word:
     def __init__(self, s, phonemes):
         self.word = s
@@ -452,7 +455,14 @@ def makePoemChapter(storyDict):
         makePrimeChapterText,
     ]
 
-    bodyFact = random.choice(makeBodies)
+    global hasMadeLimerick
+
+    if ((not hasMadeLimerick) and
+        (random.randrange(0, 100) < limerickPercent)):
+            bodyFact = makeLimerickChapterText
+            hasMadeLimerick = True
+    else:
+        bodyFact = random.choice(makeBodies)
     
     output += bodyFact(lang)
     title = "a {0} poem".format(monster).title()
