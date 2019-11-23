@@ -221,7 +221,16 @@ def reportProgress(chapters, startTime):
     timeNow = time.time()
     elapsedSeconds = timeNow - startTime
     print("elapsed seconds: {0}".format(elapsedSeconds))
-    print("words per second: {0:.2f}".format(cw / elapsedSeconds))
+    wps = cw / elapsedSeconds
+    print("words per second: {0:.2f}".format(wps))
+
+    wtg = TARGET_WORD_COUNT - cw
+    print ("words to go: ", wtg)
+    stg = wtg / wps
+    print ("seconds to go: {0:.1f}".format(stg))
+    estEndTime = timeNow + stg
+    print ("Estimated end time: {0}".format(
+        time.ctime(estEndTime)))
 
 
 def centerLine(s, pageWidth):
