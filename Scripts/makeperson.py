@@ -6,21 +6,31 @@ from util import *
 
 import makeplacename
 
+
+def makeFirstName():
+    return mutateWord(getFirstName()).capitalize()
+
+def makeLastName():
+    return mutateWord(getLastName()).capitalize()
+
+def makeRace():
+    return random.choice(getList("races.txt"))
+
 def makeperson():
     pd = {}
 
-    pd[FIRSTNAME_TAG] = mutateWord(makeFirstName()).capitalize()
-    pd[LASTNAME_TAG] = mutateWord(random.choice(pycorpora.humans.lastNames["lastNames"])).capitalize()
+    pd[FIRSTNAME_TAG] = makeFirstName()
+    pd[LASTNAME_TAG] = makeLastName()
     pd[FULLNAME_TAG] = pd[FIRSTNAME_TAG] + " " + pd[LASTNAME_TAG]
     pd[HOMETOWN_TAG] = makeplacename.makePlaceName()
     makePronouns(pd)
-    pd[RACE_TAG] = random.choice(getList("races.txt"))
+    pd[RACE_TAG] = makeRace()
 
     return pd
 
 cachedFirstNameList = None
 
-def makeFirstName():
+def getFirstName():
     global cachedFirstNameList
     
     if cachedFirstNameList is None:
@@ -41,11 +51,11 @@ def makeFirstName():
 
 cachedLastNameList = None
 
-def makeLastName():
+def getLastName():
     global cachedLastNameList
     
     if cachedLastNameList is None:
-        nameList = pycorpora.humans.lastnames["lastNames"]
+        nameList = pycorpora.humans.lastNames["lastNames"]
         nameList += pycorpora.humans.norwayLastNames["lastnames_norwegian"]
         nameList += pycorpora.humans.spanishLastNames["lastNames"]
         nameList += pycorpora.humans.tolkienCharacterNames["names"]

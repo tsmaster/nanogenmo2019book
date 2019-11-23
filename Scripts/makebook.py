@@ -5,6 +5,7 @@ import random
 import string
 import time
 import datetime
+import argparse
 
 import tracery
 from tracery.modifiers import base_english
@@ -27,9 +28,9 @@ import makejourney
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 15000
+TARGET_WORD_COUNT = 4000
 
-FAKE_GPT2 = False
+FAKE_GPT2 = True
 
 
 
@@ -202,11 +203,7 @@ def cycletext(blob):
         blob = blob.translate(to=lang)
     return blob
 
-storyDict = storydict.makeStoryDict()
-
-startTime = time.time()
-
-def reportProgress(chapters):
+def reportProgress(chapters, startTime):
     cw = calculateWordCount(chapters)
     print("current words: {0} target words: {1}".format(cw, TARGET_WORD_COUNT))
     timeNow = time.time()
@@ -214,59 +211,121 @@ def reportProgress(chapters):
     print("elapsed seconds: {0}".format(elapsedSeconds))
     print("words per second: {0:.2f}".format(cw / elapsedSeconds))
 
-def makeTitlePage(storyDict):
-    s = """
-SHAPESHIFTING:
-{0} and the Generation of Adventure
 
-
-""".format(storyDict[HERO_TAG][FULLNAME_TAG])
-    return s
-           
-
-chapters = [
-    makeCallToActionChapter(storyDict)]
-
-while calculateWordCount(chapters) < TARGET_WORD_COUNT:
-    print ("making mission chapter {0}".format(len(chapters)))
-    missionText, missionMonster, missionObj = makejourney.makeJourneyChapter(storyDict)
-    chapters.append(missionText)
-    reportProgress(chapters)
-
-    dieRoll = random.randrange(10)
-    if ((dieRoll < 4) and (not (missionMonster is None))):
-        print ("making feast of {1} chapter {0}".format(len(chapters), missionMonster))
-        chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
-        reportProgress(chapters)
-    elif ((dieRoll < 8) and (not (missionObj is None))):
-        print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
-        chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
-        reportProgress(chapters)
-    else:
-        print ("making poem chapter {0}".format(len(chapters)))
-        chapters.append(makepoem.makePoemChapter(storyDict))
-        reportProgress(chapters)
-
-if len(chapters) > 50:
-    pigIndex = 44
-else:
-    pigIndex = int(len(chapters) / 2)
+def centerLine(s, pageWidth):
+    numSpaces = int((pageWidth / 2) - (len(s)/2))
+    padding = ' ' * numSpaces
+    return padding + s
     
-chapters.insert(pigIndex, makepigchapter.makePigChapter(storyDict))
+    
+def makeTitlePage(storyDict):
+    pageWidth = 70
+    titleLine = centerLine("SHAPESHIFTING", pageWidth)
+    subtitleLine = centerLine("{0} and the Generation of Adventure".format(storyDict[HERO_TAG][FULLNAME_TAG]), pageWidth)
+    
+    return titleLine + "\n" + subtitleLine + "\n\n\n\n"
 
-chapters.append(makeHappilyEverAfterChapter())
+def reroll(storyDict):
+    while True:
+        print
+        print ("do you like this hero?")
+        print ("firstname: " + storyDict[HERO_TAG][FIRSTNAME_TAG])
+        print ("lastname: " + storyDict[HERO_TAG][LASTNAME_TAG])
+        print ("gender: " + storyDict[HERO_TAG][GENDER_TAG])
+        print ("race: " + storyDict[HERO_TAG][RACE_TAG])
+        print()
+        print("1 - fn / 2 - ln / 3 - gender / 4 - race")
+        print("g - good / r - reroll / q - quit")
+        cmd = input("cmd: ")
 
-reportProgress(chapters)
+        if cmd == 'q':
+            return False
 
-renumber(chapters)
+        if cmd == 'r':
+            storyDict[HERO_TAG] = makeperson.makeperson()
 
-s = makeTitlePage(storyDict) + '\n' + formBook(chapters)
+        if cmd == 'g':
+            return True
 
-timeLabel = datetime.datetime.now().strftime("draft_%Y_%m_%d_%H_%M")
-draftFilename = "../DraftBooks/{0}_{1}.txt".format(timeLabel, TARGET_WORD_COUNT)
-rootFilename = "../book.txt"
+        if cmd == '1':
+            storyDict[HERO_TAG][FIRSTNAME_TAG] = makeperson.makeFirstName()
 
-for fn in [draftFilename, rootFilename]:
-    with open(fn, "wt") as f:
-        f.write(s)
+        if cmd == '2':
+            storyDict[HERO_TAG][LASTNAME_TAG] = makeperson.makeLastName()
 
+        if cmd == '3':
+            makeperson.makePronouns(storyDict[HERO_TAG])
+
+        if cmd == '4':
+            storyDict[HERO_TAG][RACE_TAG] = makeperson.makeRace()
+
+        
+    
+
+def main():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("-i", "--interactive",
+                        help="give the opportunity to reroll the hero",
+                        action="store_true")
+
+    args = parser.parse_args()
+    
+    storyDict = storydict.makeStoryDict()
+
+    if args.interactive:
+        continueGenerating = reroll(storyDict)
+        if not continueGenerating:
+            sys.exit(-1)
+
+    startTime = time.time()
+
+    chapters = [
+        makeCallToActionChapter(storyDict)]
+
+    while calculateWordCount(chapters) < TARGET_WORD_COUNT:
+        print ("making mission chapter {0}".format(len(chapters)))
+        missionText, missionMonster, missionObj = makejourney.makeJourneyChapter(storyDict)
+        chapters.append(missionText)
+        reportProgress(chapters, startTime)
+    
+        dieRoll = random.randrange(10)
+        if ((dieRoll < 4) and (not (missionMonster is None))):
+            print ("making feast of {1} chapter {0}".format(len(chapters), missionMonster))
+            chapters.append(makefeastchapter.makeFeastChapter(missionMonster, storyDict))
+            reportProgress(chapters, startTime)
+        elif ((dieRoll < 8) and (not (missionObj is None))):
+            print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
+            chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
+            reportProgress(chapters, startTime)
+        else:
+            print ("making poem chapter {0}".format(len(chapters)))
+            chapters.append(makepoem.makePoemChapter(storyDict))
+            reportProgress(chapters, startTime)
+    
+    if len(chapters) > 50:
+        pigIndex = 44
+    else:
+        pigIndex = int(len(chapters) / 2)
+        
+    chapters.insert(pigIndex, makepigchapter.makePigChapter(storyDict))
+    
+    chapters.append(makeHappilyEverAfterChapter())
+    
+    reportProgress(chapters, startTime)
+    
+    renumber(chapters)
+    
+    s = makeTitlePage(storyDict) + '\n' + formBook(chapters)
+    
+    timeLabel = datetime.datetime.now().strftime("draft_%Y_%m_%d_%H_%M")
+    draftFilename = "../DraftBooks/{0}_{1}.txt".format(timeLabel, TARGET_WORD_COUNT)
+    rootFilename = "../book.txt"
+    
+    for fn in [draftFilename, rootFilename]:
+        with open(fn, "wt") as f:
+            f.write(s)
+
+
+if __name__ == "__main__":
+    main()
