@@ -3,18 +3,20 @@ import random
 import tracery
 from tracery.modifiers import base_english
 
+import pycorpora
+
 import util
 import colors
 import makeplacename
 import storydict
 import makechapter
 import makeperson
+import makemonster
 
 from tags import *
 
 missionObjectsList = util.dedup(util.getList("weapons.txt") + util.getList("armor.txt"))
 missionObjectsAdjectivesList = util.dedup(util.getList("adjectives.txt") + colors.getColors())
-monsterList = util.getList("monsters.txt")
 treasureList = util.getList("treasure.txt")
 
 
@@ -26,9 +28,6 @@ def makeMissionObject():
         article = "an"
     return ' '.join([article, adjective, noun]).lower()
 
-def makeMonsterName():
-    return random.choice(monsterList)
-
 def makeTreasure():
     treasureName = random.choice(treasureList)
     treasureAdj = random.choice(missionObjectsAdjectivesList)
@@ -37,7 +36,7 @@ def makeTreasure():
 def makeMissionParagraph(storyDict):
     missionObject = makeMissionObject()
     placename = makeplacename.makePlaceName()
-    monster = makeMonsterName()
+    monster = makemonster.getMonster()
     treasure1 = makeTreasure()
     treasure2 = makeTreasure()
 
@@ -98,7 +97,7 @@ def makeFetchChapter(storyDict):
     return chapterDict
 
 def makeKillMonsterChapter(storyDict):
-    monster = makeMonsterName()
+    monster = makemonster.getMonster()
     placename = makeplacename.makePlaceName()
 
     heShe = storydict.getHeroHeShePronoun(storyDict)
@@ -166,7 +165,7 @@ def makeBarChapter(storyDict):
             '#monster#',
             '#inan_object#',
             ],
-        'monster' : monsterList,
+        'monster' : makemonster.getMonsterList(),
         'inan_object': [
             'cup',
             'table',
@@ -301,7 +300,29 @@ def makeBuySellChapter(storyDict):
     return chapterDict
 
 def makeDeity():
-    return random.choice(util.getList("deities.txt"))
+    deityList = util.getList("deities.txt")
+    
+    deityFile = pycorpora.get_file("mythology", "egyptian_gods")
+    deityList += list(deityFile["egyptian_gods"].keys())
+    
+    deityFile = pycorpora.get_file("mythology", "greek_gods")
+    deityList += deityFile["greek_gods"]
+    
+    deityFile = pycorpora.get_file("mythology", "greek_titans")
+    deityList += deityFile["greek_titans"]
+
+    deityFile = pycorpora.get_file("mythology", "lovecraft")
+    deityList += deityFile["deities"]
+    deityList += deityFile["supernatural_creatures"]
+
+    deityFile = pycorpora.get_file("mythology", "norse_gods")
+    deityList += deityFile["norse_deities"]
+
+    deityFile = pycorpora.get_file("mythology", "roman_deities")
+    deityList += deityFile["roman_deities"]
+
+    deityList = util.dedup(deityList)
+    return random.choice(deityList)
 
 def makeHealChapter(storyDict):
     placename = makeplacename.makePlaceName()

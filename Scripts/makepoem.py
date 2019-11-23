@@ -8,6 +8,7 @@ import rhymelang
 from util import *
 import storydict
 import makechapter
+import makemonster
 
 pin = None
 
@@ -436,8 +437,7 @@ def makePoemChapter(storyDict):
         newLang.wordsBySylCount = lang['wordsBySylCount']
         print("rewrote lang")
         lang = newLang
-    monsterList = getList("monsters.txt")
-    monster = random.choice(monsterList)
+    monster = makemonster.getMonster()
     output = "This reminds me of a poem told to me by a {0}.\n\n".format(monster)
 
     makeBodies = [

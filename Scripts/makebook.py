@@ -27,7 +27,7 @@ import makejourney
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
-TARGET_WORD_COUNT = 50000
+TARGET_WORD_COUNT = 15000
 
 FAKE_GPT2 = False
 
