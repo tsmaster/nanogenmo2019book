@@ -12,6 +12,7 @@ import storydict
 import makechapter
 import makeperson
 import makemonster
+import inventory
 
 from tags import *
 
@@ -76,19 +77,59 @@ def makeFetchChapter(storyDict):
     qgFullName = questGiver[FULLNAME_TAG]
 
     heroFirstName = storyDict[HERO_TAG][FIRSTNAME_TAG]
-    
-    text = "And then {0} went on a journey to {1}. In {1}, {3} met {5}. {6} sent {7} on a mission to find {4}. {7} explored around {1}. {2}, {3} found {4}, which {3} returned to {6}. {6} paid {7} generously for the quest.".format(
-        heShe,
-        placename,
-        location,
-        heShe,
-        missionObject,
-        qgFullName,
-        qgFirstName,
-        heroFirstName,
-    )
 
-    title = "Fetching {0}".format(missionObject).title()
+    inv = storyDict[HERO_INVENTORY_TAG]
+    
+    success = (random.randrange(0, 10) > 3)
+
+    if not success:
+        text = "And then {0} went on a journey to {1}. In {1}, {3} met {5}. {6} sent {7} on a mission to find {4}. {7} explored around {1}, but could not find it.".format(
+            heShe,
+            placename,
+            location,
+            heShe,
+            missionObject,
+            qgFullName,
+            qgFirstName,
+            heroFirstName,
+        )
+        
+        title = "Searching for {0}".format(missionObject).title()
+    else:
+        keep = (random.randrange(0, 10) < 3)
+
+        if keep:
+            text = "And then {0} went on a journey to {1}. In {1}, {3} met {5}. {6} sent {7} on a mission to find {4}. {7} explored around {1}. {2}, {3} found {4}, which {3} left town with.".format(
+                heShe,
+                placename,
+                location,
+                heShe,
+                missionObject,
+                qgFullName,
+                qgFirstName,
+                heroFirstName,
+            )
+
+            inv.addItem(missionObject)
+
+            title = "Finding {0}".format(missionObject).title()
+        else:
+            text = "And then {0} went on a journey to {1}. In {1}, {3} met {5}. {6} sent {7} on a mission to find {4}. {7} explored around {1}. {2}, {3} found {4}, which {3} returned to {6}. {6} paid {7} generously for the quest.".format(
+                heShe,
+                placename,
+                location,
+                heShe,
+                missionObject,
+                qgFullName,
+                qgFirstName,
+                heroFirstName,
+            )
+
+            inv.addItem(random.choice(inventory.coins), random.randrange(100,1000))
+
+            title = "Fetching {0}".format(missionObject).title()
+            
+
     chapterDict = {
         'text': text,
         'title': title,
@@ -121,6 +162,9 @@ def makeKillMonsterChapter(storyDict):
         qgFirstName,
         heroFirstName,
     )
+
+    inv = storyDict[HERO_INVENTORY_TAG]
+    inv.addItem(random.choice(inventory.coins), random.randrange(100,1000))
 
     title = "Fighting a {0}".format(monster).title()
     chapterDict = {
@@ -249,46 +293,49 @@ def makeBuySellChapter(storyDict):
         shopName,
     )
 
-    currency = random.choice([
-        "gold pieces",
-        "silver pieces",
-        "platinum pieces",
-        "electrum pieces",
-        "copper pieces",
-        "mithril coins",
-        ])
+    inv = storyDict[HERO_INVENTORY_TAG]
     
-    text += "{0} sold {1} for {2} {3}. ".format(
-        heroFirstName,
-        makeMissionObject(),
-        random.randrange(50, 5000),
-        currency)
+    soldItem = inv.getRandNonCoinObject()
+    if not (soldItem is None):
+        currency = random.choice(inventory.coins)
+        sellPrice = random.randrange(50, 5000)
 
-    currency = random.choice([
-        "gold pieces",
-        "silver pieces",
-        "platinum pieces",
-        "electrum pieces",
-        "copper pieces",
-        "mithril coins",
-        ])
-
-    equipment = random.choice([
-        "potion",
-        "shield",
-        "hat",
-        "helmet",
-        "sword",
-        "shield",
-        "packet of rations",
-        "rope",
-        ])
+        soldItemWithArticle = util.addArticle(soldItem)
     
-    text += "{0} bought a {1} for {2} {3}. ".format(
-        heroFirstName,
-        equipment,
-        random.randrange(30, 300),
-        currency)
+        text += "{0} sold {1} for {2} {3}. ".format(
+            heroFirstName,
+            soldItemWithArticle,
+            sellPrice,
+            currency)
+
+        inv.addItem(currency, sellPrice)
+        inv.removeItem(soldItem, 1)
+
+    pocketChange = inv.pocketChange()
+    if not (pocketChange is None):
+        coinCount, currency = pocketChange
+
+        equipment = random.choice([
+            "potion",
+            "shield",
+            "hat",
+            "helmet",
+            "sword",
+            "shield",
+            "packet of rations",
+            "rope",
+        ])
+
+        equipmentWithArticle = util.addArticle(equipment)
+    
+        text += "{0} bought {1} for {2} {3}. ".format(
+            heroFirstName,
+            equipmentWithArticle,
+            coinCount,
+            currency)
+
+        inv.addItem(equipment)
+        inv.removeItem(currency, coinCount)
 
     title = "Trading at {0}".format(shopName)
     chapterDict = {
@@ -332,15 +379,29 @@ def makeHealChapter(storyDict):
     himHer = storydict.getHeroHimHerPronoun(storyDict)
 
     godName = makeDeity()
-    
-    text = "And then {0} travelled to {1}. In {1}, {2} went to a temple of {3} for healing. The priest laid hands on {4}. {5} gave a generous tithe and left refreshed.".format(
-        heroFirstName,
-        placename,
-        heShe,
-        godName,
-        himHer,
-        heSheCap
-    )
+
+    inv = storyDict[HERO_INVENTORY_TAG]
+    pc = inv.pocketChange()
+    if pc is None:
+        text = "And then {0} travelled to {1}. In {1}, {2} went to a temple of {3} for healing. The priest laid hands on {4}, which had little effect.".format(
+            heroFirstName,
+            placename,
+            heShe,
+            godName,
+            himHer,
+            heSheCap
+        )
+    else:
+        text = "And then {0} travelled to {1}. In {1}, {2} went to a temple of {3} for healing. The priest laid hands on {4}. {5} gave a generous tithe and left refreshed.".format(
+            heroFirstName,
+            placename,
+            heShe,
+            godName,
+            himHer,
+            heSheCap
+        )
+        coinCount, coinName = pc
+        inv.removeItem(coinName, coinCount)
 
     title = "Seeking Healing from {0}".format(godName)
     chapterDict = {

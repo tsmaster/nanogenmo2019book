@@ -24,13 +24,14 @@ import makepoem
 from makepoem import Language, Word
 import makeplacename
 import makejourney
+import inventory
 
 if sys.version_info[0] < 3:
     raise Exception("must use Python 3 or later")
 
 TARGET_WORD_COUNT = 50000
 
-FAKE_GPT2 = True
+FAKE_GPT2 = False
 
 
 
@@ -187,9 +188,15 @@ def makeHappilyEverAfterChapter(storyDict):
         hero[HOMETOWN_TAG],
         mentor[FULLNAME_TAG])
 
-    text += "{0} counted {1} treasure. It consisted of:\n".format(
-        hero[FIRSTNAME_TAG],
-        storydict.getHeroHisHerPronoun(storyDict))
+    inv = storyDict[HERO_INVENTORY_TAG]
+    invReport = inv.report()
+
+    if (invReport):
+        text += "{0} counted {1} treasure. It consisted of:\n".format(
+            hero[FIRSTNAME_TAG],
+            storydict.getHeroHisHerPronoun(storyDict))
+        text += invReport
+        text += "\n"
 
     text += "They all lived happily ever after. That is the end of the story, until we tell another tale."
     return makechapter.Chapter(7, "Resolutions", text)
@@ -225,7 +232,7 @@ def reportProgress(chapters, startTime):
     print("words per second: {0:.2f}".format(wps))
 
     wtg = TARGET_WORD_COUNT - cw
-    print ("words to go: ", wtg)
+    print ("words to go:", wtg)
     stg = wtg / wps
     print ("seconds to go: {0:.1f}".format(stg))
     estEndTime = timeNow + stg
@@ -298,6 +305,15 @@ def main():
         continueGenerating = reroll(storyDict)
         if not continueGenerating:
             sys.exit(-1)
+
+    inv = inventory.Inventory()
+    storyDict[HERO_INVENTORY_TAG] = inv
+
+    for i in range(0, random.randrange(0, 5)):
+        c = random.choice(inventory.coins)
+        inv.addItem(c, random.randrange(10,100))
+
+    print (inv.report())
 
     startTime = time.time()
 

@@ -47,7 +47,25 @@ def mutateConsonant(c):
     while nc == c:
         nc = random.choice("bcdfghjklmnpqrstvwxyz")
     return nc
-    
+
+def addArticle(item):
+    itemsafe = item.lower()
+
+    if (itemsafe.startswith('a ') or
+        itemsafe.startswith('an ')):
+        return item
+
+    if isVowel(itemsafe[0]):
+        return "an " + item
+    return "a " + item
+
+def stripArticle(item):
+    itemsafe = item.lower()
+    if itemsafe.startswith('a '):
+        return item[2:]
+    if itemsafe.startswith('an '):
+        return item[3:]
+    return item
 
 
 
