@@ -24,3 +24,7 @@ def getHeroHimHerPronoun(storyDict):
     hero = storyDict[HERO_TAG]
     return hero[HIM_HER_PRONOUN_TAG]
 
+def getHeroHisHerPronoun(storyDict):
+    hero = storyDict[HERO_TAG]
+    return hero[HIS_HER_PRONOUN_TAG]
+

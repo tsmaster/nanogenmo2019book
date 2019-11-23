@@ -37,7 +37,12 @@ def getCachedCities():
 
 def makePlaceName():
     cities = getCachedCities()
-    baseName = random.choice(cities)
+    while True:
+        baseName = random.choice(cities)
+        if not baseName:
+            print ("got empty place?!")
+        else:
+            break
     mutated = util.mutateWord(baseName).capitalize()
     return mutated.title() 
 

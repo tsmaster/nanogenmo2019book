@@ -178,8 +178,20 @@ def makeCallToActionChapter(storyDict):
     )
     return makechapter.Chapter(1, hero[FULLNAME_TAG], text)
 
-def makeHappilyEverAfterChapter():
-    text = "And they all lived happily ever after. That is the end of the story, until we tell another tale."
+def makeHappilyEverAfterChapter(storyDict):
+    hero = storyDict[HERO_TAG]
+    mentor = storyDict[MENTOR_TAG]
+    
+    text = "And then {0} returned to {1} and to {2}. {1} seemed smaller, somehow. {2} seemed older and wiser.\n\n".format(
+        hero[FULLNAME_TAG],
+        hero[HOMETOWN_TAG],
+        mentor[FULLNAME_TAG])
+
+    text += "{0} counted {1} treasure. It consisted of:\n".format(
+        hero[FIRSTNAME_TAG],
+        storydict.getHeroHisHerPronoun(storyDict))
+
+    text += "They all lived happily ever after. That is the end of the story, until we tell another tale."
     return makechapter.Chapter(7, "Resolutions", text)
 
 
@@ -310,7 +322,7 @@ def main():
         
     chapters.insert(pigIndex, makepigchapter.makePigChapter(storyDict))
     
-    chapters.append(makeHappilyEverAfterChapter())
+    chapters.append(makeHappilyEverAfterChapter(storyDict))
     
     reportProgress(chapters, startTime)
     
