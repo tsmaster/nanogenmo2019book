@@ -26,6 +26,15 @@ def wrapParagraph(p, wrap_col):
         return first_line + '\n' + wrapParagraph(rest, wrap_col)
 
 
+def unwrapParagraphs(text):
+    paragraphs = text.split("\n\n")
+    output = []
+    for p in paragraphs:
+        unwrapped = p.replace("\n", " ")
+        unwrapped = unwrapped.replace("  ", " ")
+        output.append(unwrapped)
+
+    return "\n\n".join(output)
 
 def test():
     with open("book.txt", "rt") as f:

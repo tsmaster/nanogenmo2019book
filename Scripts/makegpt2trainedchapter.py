@@ -1,8 +1,10 @@
 import gpt_2_simple as gpt2
 import tensorflow as tf
 import os
+import sys
 import requests
 
+import wordwrap
 import makechapter
 
 model_name = "124M"
@@ -33,7 +35,7 @@ def trainModel():
     if not os.path.isfile(file_name):
         url = "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
         data = requests.get(url)
-        	
+        
         with open(file_name, 'w') as f:
             f.write(data.text)
 
@@ -49,7 +51,7 @@ def trainModel():
     gpt2.finetune(sess,
                   extFn,
                   model_name=model_name,
-                  steps=100)   # steps is max number of training steps
+                  steps=1000)   # steps is max number of training steps
 
 
 def makeParagraph(sess, prompt, parLen):
@@ -105,11 +107,17 @@ def makeCraftChapter(itemName, parLen):
     print("P5")
     output += makeParagraph(sess, "To properly maintain {0}, you should".format(itemName), parLen)
     print("P6")
+
+    output = wordwrap.unwrapParagraphs(output)
+    
     title = "The making of " + itemName
     return makechapter.Chapter(1, title.title(), output)
 
 if __name__ == "__main__":
-    c = makeCraftChapter("a sword", 300)
-    print(c)
-    print ("wordcount:", c.wordcount())
+    if '-t' in sys.argv:
+        trainModel()
+    else:
+        c = makeCraftChapter("a sword", 300)
+        print(c)
+        print ("wordcount:", c.wordcount())
     
