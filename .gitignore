@@ -2,3 +2,7 @@
 __pycache__
 *.pyc
 /OtherRepos
+/Scripts/checkpoint
+/Scripts/models
+/Scripts/samples
+/DataSets

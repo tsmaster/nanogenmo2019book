@@ -16,7 +16,8 @@ import makeperson
 import wordwrap
 from util import *
 from tags import *
-import makemobychapter
+#import makemobychapter
+import makegpt2trainedchapter
 import storydict
 import makefeastchapter
 import makepigchapter
@@ -31,7 +32,7 @@ if sys.version_info[0] < 3:
 
 TARGET_WORD_COUNT = 50000
 
-FAKE_GPT2 = False
+#FAKE_GPT2 = False
 
 
 
@@ -333,7 +334,8 @@ def main():
             reportProgress(chapters, startTime)
         elif ((dieRoll < 8) and (not (missionObj is None))):
             print ("making crafting chapter {0} about {1}".format(len(chapters), missionObj))
-            chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
+            #chapters.append(makemobychapter.makeMobyChapter(missionObj, 600, FAKE_GPT2))
+            chapters.append(makegpt2trainedchapter.makeCraftChapter(missionObj, 250))
             reportProgress(chapters, startTime)
         else:
             print ("making poem chapter {0}".format(len(chapters)))
