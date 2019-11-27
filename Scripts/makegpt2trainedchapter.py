@@ -28,7 +28,7 @@ def trainModel():
         "morte_darthur_ii.txt",
         "robin_hood.txt",
         "robin_hood_pyle.txt",
-        "wizard_of_oz.txt",
+        #"wizard_of_oz.txt",
        ]
     
     file_name = "../DataSets/shakespeare.txt"
