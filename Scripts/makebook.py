@@ -264,6 +264,7 @@ def reroll(storyDict):
         print ("race: " + storyDict[HERO_TAG][RACE_TAG])
         print()
         print("1 - fn / 2 - ln / 3 - gender / 4 - race")
+        print("! - man fn / @ - man ln")
         print("g - good / r - reroll / q - quit")
         cmd = input("cmd: ")
 
@@ -287,6 +288,14 @@ def reroll(storyDict):
 
         if cmd == '4':
             storyDict[HERO_TAG][RACE_TAG] = makeperson.makeRace()
+
+        if cmd == '!':
+            storyDict[HERO_TAG][FIRSTNAME_TAG] = input("first name > ")
+
+        if cmd == '@':
+            storyDict[HERO_TAG][LASTNAME_TAG] = input("last name > ")
+
+        storyDict[HERO_TAG][FULLNAME_TAG] = storyDict[HERO_TAG][FIRSTNAME_TAG] + " " + storyDict[HERO_TAG][LASTNAME_TAG]
 
         
     
